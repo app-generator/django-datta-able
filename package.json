@@ -1,0 +1,29 @@
+{
+  "name": "django-dashboard-dattaable",
+  "version": "1.0.1",
+  "description": "A simple UI-Ready Django boilerplate.",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "devDependencies": {
+    "eslint": "5.0.0",
+    "eslint-config-google": "0.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/app-generator/django-dashboard-dattaable"
+  },
+  "keywords": [
+    "django",
+    "admin-panel",
+    "open-source"
+  ],
+  "author": "AppSeed.us",
+  "contributors": [
+    "AppSeed Support <support@appseed.us>"
+  ],
+  "license": "MIT"
+}
