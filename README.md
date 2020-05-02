@@ -31,7 +31,6 @@ This product is **built based on community feedback**. Feel free (anonymously) t
 
 - [Django Dashboard DattaAble](https://appseed.us/admin-dashboards/django-dashboard-dattaable) - Product page
 - [Django Dashboard DattaAble](https://django-dashboard-dattaable.appseed.us/login/) - LIVE Demo
-- [Django Dashboard DattaAble](https://docs.appseed.us/admin-dashboards/django-dashboard-dattaable/) - Documentation
 
 <br />
 
