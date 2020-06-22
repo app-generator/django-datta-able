@@ -1,8 +1,9 @@
 # [Django Dashboard DattaAble](https://appseed.us/admin-dashboards/django-dashboard-dattaable)
 
-> **Open-Source Admin Dashboard** coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
+> **Open-Source Admin Dashboard** coded in **Django Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
 
-- UI Kit: **DattaAble Dashboard** (Free version) provided by **CodedThemes** 
+- UI Kit: **DattaAble Dashboard** (Free version) provided by **CodedThemes**
+- Codebase: [Django Dashboard Boilerplate](https://github.com/app-generator/boilerplate-code-django-dashboard) v1.0.1
 - UI-Ready app, SQLite Database, Django Native ORM
 - Modular design, clean code-base
 - Session-Based Authentication, Forms validation
