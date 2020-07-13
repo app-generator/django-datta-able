@@ -1,4 +1,4 @@
-# [Django Dashboard DattaAble](https://appseed.us/admin-dashboards/django-dashboard-dattaable)
+# [Django Dashboard - DattaAble Design](https://appseed.us/admin-dashboards/django-dashboard-dattaable)
 
 > **Open-Source Admin Dashboard** coded in **Django Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - features:
 
@@ -14,10 +14,10 @@
 
 > Links
 
-- [Django Dashboard DattaAble](https://appseed.us/admin-dashboards/django-dashboard-dattaable) - Product page
-- [Django Dashboard DattaAble](https://django-dashboard-dattaable.appseed.us/login/) - LIVE Demo
-- More [Django Admin Dashboards](https://appseed.us/admin-dashboards/django) - index hosted by **AppSeed**
-- [Free Admin Dashboards](https://appseed.us/admin-dashboards/open-source) - index hosted by **AppSeed**
+- [Django Dashboard - DattaAble Design](https://appseed.us/admin-dashboards/django-dashboard-dattaable) - Product page
+- [Django Dashboard DattaAble Demo](https://django-dashboard-dattaable.appseed.us/login/) - LIVE App
+- More [Django Dashboards](https://appseed.us/admin-dashboards/django) - index hosted by **AppSeed**
+- More [Admin Dashboards](https://appseed.us/admin-dashboards) - index hosted by **AppSeed**
 
 <br />
 
@@ -169,4 +169,4 @@ Datta Able Bootstrap Lite is the most styled Bootstrap 4 Lite Admin Template, ar
 <br />
 
 ---
-**[Django Dashboard DattaAble](https://appseed.us/admin-dashboards/django-dashboard-dattaable)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+**[Django Dashboard - DattaAble Design](https://appseed.us/admin-dashboards/django-dashboard-dattaable)** - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
