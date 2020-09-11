@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 """
-License: MIT
 Copyright (c) 2019 - present AppSeed.us
 """
 
@@ -12,7 +11,12 @@ from django import template
 
 @login_required(login_url="/login/")
 def index(request):
-    return render(request, "index.html")
+    
+    context = {}
+    context['segment'] = 'index'
+
+    html_template = loader.get_template( 'index.html' )
+    return HttpResponse(html_template.render(context, request))
 
 @login_required(login_url="/login/")
 def pages(request):
@@ -21,16 +25,18 @@ def pages(request):
     # Pick out the html file name from the url. And load that template.
     try:
         
-        load_template = request.path.split('/')[-1]
+        load_template      = request.path.split('/')[-1]
+        context['segment'] = load_template
+        
         html_template = loader.get_template( load_template )
         return HttpResponse(html_template.render(context, request))
         
     except template.TemplateDoesNotExist:
 
-        html_template = loader.get_template( 'error-404.html' )
+        html_template = loader.get_template( 'page-404.html' )
         return HttpResponse(html_template.render(context, request))
 
     except:
     
-        html_template = loader.get_template( 'error-500.html' )
+        html_template = loader.get_template( 'page-500.html' )
         return HttpResponse(html_template.render(context, request))

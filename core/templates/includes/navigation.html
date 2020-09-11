@@ -15,7 +15,8 @@
                     <li class="nav-item pcoded-menu-caption">
                         <label>Navigation</label>
                     </li>
-                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item active">
+                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" 
+                        class="nav-item {% if 'index' == segment %} active {% endif %}">
                         <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                     </li>
                     <li class="nav-item pcoded-menu-caption">
@@ -38,17 +39,23 @@
                     <li class="nav-item pcoded-menu-caption">
                         <label>Forms & table</label>
                     </li>
-                    <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
+                    <li data-username="form elements advance componant validation masking wizard picker select" 
+                        class="nav-item {% if 'forms' == segment %} active {% endif %}">
                         <a href="/ui-forms.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Form elements</span></a>
                     </li>
-                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                    <li data-username="Table bootstrap datatable footable" 
+                        class="nav-item {% if 'tables' == segment %} active {% endif %}">
                         <a href="/ui-tables.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Table</span></a>
                     </li>
                     <li class="nav-item pcoded-menu-caption">
                         <label>Chart & Maps</label>
                     </li>
-                    <li data-username="Charts Morris" class="nav-item"><a href="/charts-morris.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a></li>
-                    <li data-username="Maps Google" class="nav-item"><a href="/maps-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a></li>
+                    <li data-username="Charts Morris" 
+                        class="nav-item {% if 'charts-morris' == segment %} active {% endif %}">
+                        <a href="/charts-morris.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a></li>
+                    <li data-username="Maps Google" 
+                        class="nav-item {% if 'maps-google' == segment %} active {% endif %}">
+                        <a href="/maps-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a></li>
                     <li class="nav-item pcoded-menu-caption">
                         <label>Pages</label>
                     </li>
@@ -59,7 +66,9 @@
                             <li class=""><a href={% url 'register' %} class="">Register</a></li>
                         </ul>
                     </li>
-                    <li data-username="Sample Page" class="nav-item"><a href="/page-blank.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
+                    <li data-username="Sample Page" 
+                        class="nav-item {% if 'page-blank' == segment %} active {% endif %}">
+                        <a href="/page-blank.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
 
                     <li data-username="Disabled Menu" class="nav-item">
                         <a href={% url 'logout' %} class="nav-link">
