@@ -45,7 +45,7 @@ PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Suppo
 <br />
 <br />
 
-![Django Datta Able - Open-Source Admin Panel Coded in Django.](https://raw.githubusercontent.com/app-generator/static/master/django-dashboard-dattaable/django-dashboard-dattaable-screen.png)
+![Django Datta Able - Open-Source Admin Panel Coded in Django.](https://raw.githubusercontent.com/app-generator/static/master/django-dashboard-dattaable/django-dashboard-dattaable-intro.gif)
 
 <br />
 
