@@ -172,4 +172,4 @@ Datta Able Bootstrap Lite is the most styled Bootstrap 4 Lite Admin Template, ar
 <br />
 
 ---
-[Django Dashboard](https://appseed.us/admin-dashboards/django?ref=gh) Datta Able - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Django Dashboard](https://appseed.us/admin-dashboards/django?ref=gh) Datta Able - Provided by **AppSeed [App Generator](https://appseed.us/app-generator)**.
