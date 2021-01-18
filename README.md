@@ -19,7 +19,7 @@
 > Links
 
 - [Django Datta Able](https://appseed.us/admin-dashboards/django-dashboard-dattaable) - the product page
-- [Django Datta Able - Demo](https://django-dashboard-dattaable.appseed.us/) - Default login credentials ** *test / ApS12_ZZs8* **
+- [Django Datta Able - Demo](https://django-datta-able.appseed-srv1.com/) - Default login credentials ** *test / ApS12_ZZs8* **
 - [Django Datta Able - Docs](https://docs.appseed.us/admin-dashboards/django-dashboard-dattaable/) - Product documentation
 
 <br />
