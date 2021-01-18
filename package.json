@@ -1,0 +1,21 @@
+{
+    "name": "django-dashboard-dattaable",
+    "mastertemplate": "boilerplate-code-django-dashboard",
+    "version": "1.0.1",
+    "description": "Template project - Django Boilerplate Code",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/app-generator/django-dashboard-dattaable"
+    },
+    "bugs": {
+        "url": "https://github.com/app-generator/django-dashboard-dattaable/issues",
+        "email": "support@appseed.us"
+    },
+    "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
