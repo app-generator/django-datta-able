@@ -73,6 +73,73 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
 
 <br />
 
+## Code-base structure
+
+The project is coded using a simple and intuitive structure presented below:
+
+```bash
+< PROJECT ROOT >
+   |
+   |-- core/                               # Implements app logic and serve the static assets
+   |    |-- settings.py                    # Django app bootstrapper
+   |    |-- wsgi.py                        # Start the app in production
+   |    |-- urls.py                        # Define URLs served by all apps/nodes
+   |    |
+   |    |-- static/
+   |    |    |-- <css, JS, images>         # CSS files, Javascripts files
+   |    |
+   |    |-- templates/                     # Templates used to render pages
+   |         |
+   |         |-- includes/                 # HTML chunks and components
+   |         |    |-- navigation.html      # Top menu component
+   |         |    |-- sidebar.html         # Sidebar component
+   |         |    |-- footer.html          # App Footer
+   |         |    |-- scripts.html         # Scripts common to all pages
+   |         |
+   |         |-- layouts/                  # Master pages
+   |         |    |-- base-fullscreen.html # Used by Authentication pages
+   |         |    |-- base.html            # Used by common pages
+   |         |
+   |         |-- accounts/                 # Authentication pages
+   |         |    |-- login.html           # Login page
+   |         |    |-- register.html        # Register page
+   |         |
+   |      index.html                       # The default page
+   |     page-404.html                     # Error 404 page
+   |     page-500.html                     # Error 404 page
+   |       *.html                          # All other HTML pages
+   |
+   |-- apps/
+   |    |-- authentication/                # Handles auth routes (login and register)
+   |    |    |
+   |    |    |-- urls.py                   # Define authentication routes  
+   |    |    |-- views.py                  # Handles login and registration  
+   |    |    |-- forms.py                  # Define auth forms  
+   |    |
+   |    |-- app/                           # A simple app that serve HTML files
+   |         |
+   |         |-- views.py                  # Serve HTML pages for authenticated users
+   |         |-- urls.py                   # Define some super simple routes  
+   |
+   |-- requirements.txt                    # Development modules - SQLite storage
+   |
+   |-- .env                                # Inject Configuration via Environment
+   |-- manage.py                           # Start the app - Django default start script
+   |
+   |-- ************************************************************************
+```
+
+<br />
+
+> The bootstrap flow
+
+- Django bootstrapper `manage.py` uses `core/settings.py` as the main configuration file
+- `core/settings.py` loads the app magic from `.env` file
+- Redirect the guest users to Login page
+- Unlock the pages served by *app* node for authenticated users
+
+<br />
+
 ## Deployment
 
 The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
@@ -95,7 +162,7 @@ $ cd django-dashboard-dattaable
 $ sudo docker-compose pull && sudo docker-compose build && sudo docker-compose up -d
 ```
 
-Visit `http://localhost:5005` in your browser. The app should be up & running.
+Visit `http://localhost:85` in your browser. The app should be up & running.
 
 <br />
 
@@ -163,7 +230,7 @@ A dashboard is a set of pages that are easy to read and offer information to the
 
 <br />
 
-### [Datta Able Free Dashboard](https://codedthemes.com/item/datta-able-bootstrap-lite/)
+### Datta Able Free Dashboard
 
 Datta Able Bootstrap Lite is the most styled Bootstrap 4 Lite Admin Template, around all other Lite/Free admin templates in the market. It comes with high feature-rich pages and components with fully developer-centric code. Comes with error/bug-free, well structured, well-commented code and regularly with all latest updated code, which saves your large amount of developing backend application time and it is fully customizable. - provided by **CodedThemes**.
 
