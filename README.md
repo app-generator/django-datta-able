@@ -44,6 +44,10 @@ Visit `http://localhost:85` in your browser. The app should be up & running.
 
 <br />
 
+![Datta Able Django - Open-source seed project crafted in Django](https://user-images.githubusercontent.com/51070104/141156910-d6a7eeba-d7a5-499b-a766-2066efd5f6b6.gif)
+
+<br />
+
 ## How to use it
 
 ```bash
