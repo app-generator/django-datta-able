@@ -19,7 +19,6 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django)** g
 
 - [Datta Able Django](https://appseed.us/admin-dashboards/django-datta-able) - Product page
 - [Datta Able Django](https://django-datta-able.appseed-srv1.com/) - LIVE deployment
-- [Datta Able Django](https://docs.appseed.us/products/django-dashboards/datta-able) - product documentation
 
 <br />
 
@@ -35,9 +34,7 @@ $ cd django-datta-able
 > Start the app in Docker
 
 ```bash
-$ docker-compose pull   # download dependencies 
-$ docker-compose build  # local set up
-$ docker-compose up -d  # start the app 
+$ docker-compose up --build 
 ```
 
 Visit `http://localhost:85` in your browser. The app should be up & running.
