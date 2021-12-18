@@ -6,11 +6,11 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django)** g
 
 > Features
 
-- Up-to-date [dependencies](./requirements.txt): **Django 3.2.6 LTS**
+- `Up-to-date dependencies`: **Django 3.2.6 LTS**
 - UI-Ready app, SQLite Database, Django Native ORM
 - Modular design, clean codebase
 - Session-Based Authentication, Forms validation
-- Deployment scripts: Docker, Gunicorn / Nginx
+- `Deployment`: **Docker**, Gunicorn / Nginx
 - Support via **Github** and [Discord](https://discord.gg/fZC6hup).
 
 <br />
@@ -22,7 +22,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django)** g
 
 <br />
 
-## Quick Start in [Docker](https://www.docker.com/)
+## Quick Start in `Docker`
 
 > Get the code
 
