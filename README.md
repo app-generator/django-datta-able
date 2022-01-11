@@ -22,7 +22,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django)** g
 
 <br />
 
-## Quick Start in `Docker`
+## ✨ Quick Start in `Docker`
 
 > Get the code
 
