@@ -17,8 +17,8 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django)** g
 
 > Links
 
-- [Datta Able Django](https://appseed.us/admin-dashboards/django-datta-able) - Product page
-- [Datta Able Django](https://django-datta-able.appseed-srv1.com/) - LIVE deployment
+- 👉 [Datta Able Django](https://appseed.us/admin-dashboards/django-datta-able) - Product page
+- 👉 [Datta Able Django](https://django-datta-able.appseed-srv1.com/) - LIVE deployment
 
 <br />
 
@@ -45,7 +45,7 @@ Visit `http://localhost:85` in your browser. The app should be up & running.
 
 <br />
 
-## How to use it
+## ✨ How to use it
 
 ```bash
 $ # Get the code
@@ -81,7 +81,7 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
 
 <br />
 
-## Code-base structure
+## ✨ Code-base structure
 
 The project is coded using a simple and intuitive structure presented below:
 
@@ -146,7 +146,7 @@ The project is coded using a simple and intuitive structure presented below:
 
 <br />
 
-## Deployment
+## ✨ Deployment
 
 The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
 
@@ -193,7 +193,7 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 
 <br />
 
-## Credits & Links
+## ✨ Credits & Links
 
 ### [Django Admin Dashboards](https://appseed.us/admin-dashboards/django)
 
@@ -208,7 +208,7 @@ Start fast your next Django project by using functional admin dashboards enhance
 
 <br />
 
-### [What is a dashboard](https://en.wikipedia.org/wiki/Dashboard_(business))
+### What is a dashboard
 
 A dashboard is a set of pages that are easy to read and offer information to the user in real-time regarding his business. A dashboard usually consists of graphical representations of the current status and trends within an organization. Having a well-designed dashboard will give you the possibility to act and make informed decisions based on the data that your business provides - *definition provided by [Creative-Tim - Free Dashboard Templates](https://www.creative-tim.com/blog/web-design/free-dashboard-templates/?ref=appseed)*.
 
