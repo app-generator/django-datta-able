@@ -3,7 +3,7 @@
 ## [1.0.4] 2022-01-16
 ### Improvements
 
-- Bump Flask Codebase to [v2stable.0.1](https://github.com/app-generator/boilerplate-code-django-dashboard/releases)
+- Bump Django Codebase to [v2stable.0.1](https://github.com/app-generator/boilerplate-code-django-dashboard/releases)
 - Dependencies update (all packages) 
   - Django==4.0.1
 - Settings update for Django 4.x
