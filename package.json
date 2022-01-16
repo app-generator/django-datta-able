@@ -1,7 +1,7 @@
 {
     "name": "django-dashboard-dattaable",
     "mastertemplate": "boilerplate-code-django-dashboard",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Template project - Django Boilerplate Code",
     "scripts": {},
     "repository": {
