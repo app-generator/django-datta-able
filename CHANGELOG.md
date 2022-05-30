@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.5] 2022-05-30
+### Improvements
+
+- Built with [Datta Able Generator](https://appseed.us/generator/datta-able/)
+  - Timestamp: `2022-05-30 21:05`
+
 ## [1.0.4] 2022-01-16
 ### Improvements
 
