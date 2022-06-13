@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.6] 2022-06-13
+### Improvements
+
+- Improved `Auth UX`
+- Built with [Datta Able Generator](https://appseed.us/generator/datta-able/)
+  - Timestamp: `2022-05-30 21:20`
+
 ## [1.0.5] 2022-05-30
 ### Improvements
 

@@ -21,7 +21,7 @@
 
                     <span class="mb-0 text-muted">
                         {% if msg %}
-                            {{ msg | safe }}
+                            <span class="text-danger">{{ msg | safe }}</span>
                         {% else %}
                             Add your credentials
                         {% endif %} 

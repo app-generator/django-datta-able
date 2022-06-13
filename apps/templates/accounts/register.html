@@ -21,7 +21,7 @@
 
                     <span class="mb-0 text-muted">
                         {% if msg %}
-                            {{ msg | safe }}
+                            <span class="text-danger">{{ msg | safe }}</span>
                         {% else %}
                             Add your credentials
                         {% endif %} 
@@ -30,41 +30,51 @@
                     <br />
                     <br />
 
-                    <form role="form" method="post" action="">
+                    <!-- Hide the form on success -->
+                    {% if success %}
 
-                        {% csrf_token %}                    
+                        <a href="{% url 'login' %}" class="btn btn-primary shadow-2 mb-4">Sign IN</a>
 
-                        <div class="input-group mb-3">
-                            {{ form.username }}
-                        </div>
-                        <span class="text-error">{{ form.username.errors }}</span>
+                    {% else %}
 
-                        <div class="input-group mb-3">
-                            {{ form.email }}
-                        </div>
-                        <span class="text-error">{{ form.email.errors }}</span>
+                        <form role="form" method="post" action="">
 
-                        <div class="input-group mb-4">
-                            {{ form.password1 }}
-                        </div>
-                        <span class="text-error">{{ form.password1.errors }}</span>
+                            {% csrf_token %}                    
 
-                        <div class="input-group mb-4">
-                            {{ form.password2 }}
-                        </div>
-                        <span class="text-error">{{ form.password2.errors }}</span>
-                        
-                        <div class="form-group text-left">
-                            <div class="checkbox checkbox-fill d-inline">
-                                <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
-                                <label for="checkbox-fill-a1" class="cr"> Agree with <a href="#">terms</a></label>
+                            <div class="input-group mb-3">
+                                {{ form.username }}
                             </div>
-                        </div>
-                        <button type="submit" name="register" class="btn btn-primary shadow-2 mb-4">Register</button>
+                            <span class="text-error">{{ form.username.errors }}</span>
 
-                    </form>
+                            <div class="input-group mb-3">
+                                {{ form.email }}
+                            </div>
+                            <span class="text-error">{{ form.email.errors }}</span>
 
-                    <p class="mb-0 text-muted">Already have an account? <a href="{% url 'login' %}" >Login</a></p>
+                            <div class="input-group mb-4">
+                                {{ form.password1 }}
+                            </div>
+                            <span class="text-error">{{ form.password1.errors }}</span>
+
+                            <div class="input-group mb-4">
+                                {{ form.password2 }}
+                            </div>
+                            <span class="text-error">{{ form.password2.errors }}</span>
+                            
+                            <div class="form-group text-left">
+                                <div class="checkbox checkbox-fill d-inline">
+                                    <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
+                                    <label for="checkbox-fill-a1" class="cr"> Agree with <a href="#">terms</a></label>
+                                </div>
+                            </div>
+                            <button type="submit" name="register" class="btn btn-primary shadow-2 mb-4">Register</button>
+
+                        </form>
+
+                        <p class="mb-0 text-muted">Already have an account? <a href="{% url 'login' %}" >Login</a></p>
+                    
+                    {% endif %}
+                    
                     <br />
                     <p class="mb-2 text-muted">
                         &copy; <a target="_blank" href="https://bit.ly/37fF9RT">CodedThemes</a> 
