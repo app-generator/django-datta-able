@@ -1,0 +1,21 @@
+{
+    "name": "boilerplate-code-django-dashboard",
+    "mastertemplate": "boilerplate-code-django-dashboard",
+    "version": "2stable.0.1",
+    "description": "Template project - Django Boilerplate Code",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/app-generator/boilerplate-code-django-dashboard"
+    },
+    "bugs": {
+        "url": "https://github.com/app-generator/boilerplate-code-django-dashboard/issues",
+        "email": "support@appseed.us"
+    },
+    "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
