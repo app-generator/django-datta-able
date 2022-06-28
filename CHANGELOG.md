@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.8] 2022-06-28
+### Improvements
+
+- Bump UI: `v1.0.0-enh1`
+  - Added `dark-mode`
+  - User profile page 
+
 ## [1.0.7] 2022-06-23
 ### Improvements
 
