@@ -39,7 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home'  # Enable the inner home (home)
+    'apps.home',                                    # Enable the inner home (home)
+    'allauth',                                      # OAuth new
+    'allauth.account',                              # OAuth new
+    'allauth.socialaccount',                        # OAuth new 
+    'allauth.socialaccount.providers.github',       # OAuth new 
+    'allauth.socialaccount.providers.twitter',      # OAuth new  
+    "sslserver"    
 ]
 
 MIDDLEWARE = [
@@ -141,8 +147,30 @@ STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
+) 
+
+#############################################################
+# OAuth settings 
+
+GITHUB_ID     = os.getenv('GITHUB_ID', None)
+GITHUB_SECRET = os.getenv('GITHUB_SECRET', None)
+GITHUB_AUTH   = GITHUB_SECRET is not None and GITHUB_ID is not None
+
+AUTHENTICATION_BACKENDS = (
+    "core.custom-auth-backend.CustomBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
 )
 
+SITE_ID                    = 1 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-#############################################################
-#############################################################
+SOCIALACCOUNT_PROVIDERS = {}
+
+if GITHUB_AUTH:
+    SOCIALACCOUNT_PROVIDERS['github'] = {
+        'APP': {
+            'client_id': GITHUB_ID,
+            'secret': GITHUB_SECRET,
+            'key': ''
+        }
+    }

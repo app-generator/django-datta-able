@@ -14,9 +14,7 @@
             </div>
             <div class="card">
                 <div class="card-body text-center">
-                    <div class="mb-4">
-                        <i class="feather icon-unlock auth-icon"></i>
-                    </div>
+
                     <h3 class="mb-4">Login</h3>
 
                     <span class="mb-0 text-muted">
@@ -42,22 +40,25 @@
                             {{ form.password }}
                         </div>
                         
-                        <div class="form-group text-left">
-                            <div class="checkbox checkbox-fill d-inline">
-                                <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
-                                <label for="checkbox-fill-a1" class="cr"> Save Details</label>
-                            </div>
-                        </div>
                         <button type="submit" name="login" class="btn btn-primary shadow-2 mb-4">Login</button>
 
                     </form>
 
                     <p class="mb-0 text-muted">Don’t have an account? <a href="{% url 'register' %}" >Sign UP</a></p>
+
                     <br />
-                    <p class="mb-2 text-muted">
-                        &copy; <a target="_blank" href="https://bit.ly/37fF9RT">CodedThemes</a> 
-                        - <a target="_blank" href="https://appseed.us/product/datta-able/django/">Django Datta Able</a>.
-                    </p>
+
+                    {% if GITHUB_AUTH %}
+                    <div class="mx-2">
+                        <form method="post" action="/social_login/github/login/?next=%2F">
+                            {% csrf_token %}
+                            <button class="btn btn-light" type="submit" style="background-color: #ffffff; border-color: #ffffff;">
+                                <i class="feather icon-github auth-icon"></i></button>
+                        </form>
+                        <span class="mx-1">Sign IN with GitHub</span>
+                    </div>                   
+                    {% endif %}   
+
                 </div>
             </div>
         </div>
