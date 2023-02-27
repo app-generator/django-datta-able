@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: django-datta
+    plan: starter
+    env: python
+    region: frankfurt  # region should be same as your database region.
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn core.wsgi:application"
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4

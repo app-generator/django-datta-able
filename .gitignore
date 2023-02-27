@@ -1,32 +1,15 @@
-# byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-
-# tests and coverage
-*.pytest_cache
-.coverage
-
-# database & logs
-*.db
-*.sqlite3
-*.log
-
-# venv
+*.pyc
+*.DS_Store
+*.egg*
+/dist/
+/.idea
+/docs/_build/
+/node_modules/
+build/
 env
-venv
+/staticfiles/
 
-# other
-.DS_Store
+#src
+*.sqlite*
 
-# javascript
-package-lock.json
-
-staticfiles/*
-!staticfiles/.gitkeep 
-.vscode/symbols.json
-
-apps/static/assets/node_modules
-apps/static/assets/yarn.lock
-apps/static/assets/.temp
-
-.env__
+.env
