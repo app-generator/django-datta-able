@@ -1,10 +1,17 @@
 # Change Log
 
+## [1.0.11] 2023-02-27
+### Changes
+
+- Bump UI version
+  - [Django Datta Admin](https://github.com/app-generator/django-admin-datta) `v1.0.3`
+- Update DOCS
+
 ## [1.0.10] 2023-02-27
 ### Changes
 
 - Move to theme-based pattern
-  - [Django Datta Admin](https://github.com/app-generator/django-admin-datta) 
+  - [Django Datta Admin](https://github.com/app-generator/django-admin-datta)
 - 🚀 `Deployment` 
   - `CI/CD` flow via `Render`
 
