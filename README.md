@@ -91,12 +91,11 @@ $ python manage.py migrate
 
 <br />
 
-> Start the app
+> Start the APP
 
 ```bash
-$ python manage.py runserver
-// OR with https
-$ python manage.py runsslserver 
+$ python manage.py createsuperuser # create the admin
+$ python manage.py runserver       # start the project
 ```
 
 At this point, the app runs at `http://127.0.0.1:8000/`. 
@@ -124,11 +123,13 @@ $ python manage.py migrate
 
 <br />
 
-> Start the app
+> Start the APP
 
 ```bash
-$ python manage.py runserver
+$ python manage.py createsuperuser # create the admin
+$ python manage.py runserver       # start the project
 ```
+
 
 At this point, the app runs at `http://127.0.0.1:8000/`. 
 
@@ -155,7 +156,6 @@ The project is coded using a simple and intuitive structure presented below:
    |    |-- templates/                    # Theme Customisation 
    |         |-- pages                    # 
    |              |-- custom-index.py     # Custom Dashboard      
-   |     
    |
    |-- requirements.txt                   # Project Dependencies
    |
