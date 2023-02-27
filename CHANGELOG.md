@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.10] 2023-02-27
+### Changes
+
+- Move to theme-based pattern
+  - [Django Datta Admin](https://github.com/app-generator/django-admin-datta) 
+- 🚀 `Deployment` 
+  - `CI/CD` flow via `Render`
+
 ## [1.0.9] 2022-09-10
 ### Improvements
 
