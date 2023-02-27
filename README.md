@@ -46,9 +46,9 @@ Visit `http://localhost:5085` in your browser. The app should be up & running.
 
 <br />
 
-## ✨ Create a new `.env` file using sample `env.sample`
+## Environment
 
-The meaning of each variable can be found below: 
+Create a new `.env` file using sample `env.sample`. The meaning of each variable can be found below: 
 
 - `DEBUG`: if `True` the app runs in develoment mode
   - For production value `False` should be used
@@ -59,12 +59,11 @@ The meaning of each variable can be found below:
 
 <br />
 
-## ✨ How to use it
+## Manual Build
 
 > Download the code 
 
 ```bash
-$ # Get the code
 $ git clone https://github.com/app-generator/django-datta-able.git
 $ cd django-datta-able
 ```
@@ -137,7 +136,7 @@ At this point, the app runs at `http://127.0.0.1:8000/`.
 
 <br />
 
-## Codebase structure
+## Codebase Structure
 
 The project is coded using a simple and intuitive structure presented below:
 
