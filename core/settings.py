@@ -30,7 +30,7 @@ if not SECRET_KEY:
 # Render Deployment Code
 DEBUG = 'RENDER' not in os.environ
 
-# Docker HOST
+# HOSTs List
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Add here your deployment HOSTS
