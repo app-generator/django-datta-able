@@ -1,0 +1,20 @@
+{% load replace_value %}
+
+<div class="page-header">
+  <div class="page-block">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div class="page-header-title">
+          <h5 class="m-b-10">{{ segment|replace_value:"_" }}</h5>
+        </div>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="feather icon-home"></i></a></li>
+          {% if parent %}
+            <li class="breadcrumb-item"><a href="javascript:">{{ parent|replace_value:"_" }}</a></li>
+          {% endif %}
+          <li class="breadcrumb-item"><a href="javascript:">{{ segment|replace_value:"_" }}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
