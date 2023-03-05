@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.12] 2023-02-27
+### Changes
+
+- Create Local Directories
+  - `assets`
+  - `templates`
+
 ## [1.0.11] 2023-02-27
 ### Changes
 
