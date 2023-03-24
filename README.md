@@ -237,7 +237,7 @@ At this point, the product should be LIVE.
 
 <br />
 
-## PRO Version
+## [Datta Able Django](https://appseed.us/product/datta-able-pro/django/) `PRO Version`
 
 > For more components, pages and priority on support, feel free to take a look at this amazing starter:
 
