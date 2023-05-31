@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.13] 2023-05-30
+### Changes
+
+- Bump UI version
+  - [Django Datta Admin](https://github.com/app-generator/django-admin-datta) `v1.0.8`
+
 ## [1.0.12] 2023-02-27
 ### Changes
 
