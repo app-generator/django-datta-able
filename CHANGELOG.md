@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.14] 2023-06-02
+### Changes
+
+- Patch #29 - Fix Broken Links
+- Bump UI version
+  - [Django Datta Admin](https://github.com/app-generator/django-admin-datta) `v1.0.9`
+
 ## [1.0.13] 2023-05-30
 ### Changes
 
