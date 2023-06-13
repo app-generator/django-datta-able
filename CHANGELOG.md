@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.16] 2023-06-13
+### Changes
+
+- HOT Reload in Docker 
+ - Django Code + Templates
+
 ## [1.0.15] 2023-06-03
 ### Changes
 
