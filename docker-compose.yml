@@ -1,9 +1,11 @@
-version: '3.8'
+version: "3.8"
 services:
   appseed-app:
     container_name: appseed_app
     restart: always
     build: .
+    volumes:
+      - ./:/app
     networks:
       - db_network
       - web_network
@@ -17,11 +19,10 @@ services:
       - ./nginx:/etc/nginx/conf.d
     networks:
       - web_network
-    depends_on: 
+    depends_on:
       - appseed-app
 networks:
   db_network:
     driver: bridge
   web_network:
     driver: bridge
- 
