@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.0.17] 2023-06-13
+### Changes
+
+- DOCS Update (readme)
+
 ## [1.0.16] 2023-06-13
 ### Changes
 
