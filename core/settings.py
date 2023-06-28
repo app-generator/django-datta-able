@@ -10,9 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-import os, random, string
+import os, random, string, inspect
 from pathlib import Path
 from dotenv import load_dotenv
+
+import django_dyn_dt
 
 load_dotenv()  # take environment variables from .env.
 
@@ -52,6 +54,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "home",
+
+    # Tooling
+    'django_dyn_dt',  # <-- NEW: Dynamic_DT
 ]
 
 MIDDLEWARE = [
@@ -67,12 +72,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "core.urls"
 
-HOME_TEMPLATES = os.path.join(BASE_DIR, 'templates')
+HOME_TEMPLATES      = os.path.join(BASE_DIR, 'templates') 
+TEMPLATE_DIR_DATATB = os.path.join(BASE_DIR, "django_dyn_dt/templates") # <-- NEW: Dynamic_DT
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [HOME_TEMPLATES],
+        "DIRS": [HOME_TEMPLATES, TEMPLATE_DIR_DATATB],                  # <-- UPD: Dynamic_DT
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -154,8 +160,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+DYN_DB_PKG_ROOT = os.path.dirname( inspect.getfile( django_dyn_dt ) ) # <-- NEW: Dynamic_DT
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(DYN_DB_PKG_ROOT, "templates/static"),                # <-- NEW: Dynamic_DT 
 )
 
 #if not DEBUG:
@@ -168,3 +177,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# *** DYNAMIC_DATATB Settings ***
+DYNAMIC_DATATB = {
+    # SLUG -> Import_PATH 
+    'product'  : "home.models.Product",
+}
+# *** *** *** *** *** ***
