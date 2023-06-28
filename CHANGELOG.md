@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.18] 2023-06-28
+### Changes
+
+- Integrate `Dynamic DataTables`
+  - URI: `/datatb/product/` 
+
 ## [1.0.17] 2023-06-13
 ### Changes
 
