@@ -3,7 +3,7 @@
 ## [1.0.18] 2023-06-28
 ### Changes
 
-- Integrate `Dynamic DataTables`
+- Integrate [Dynamic DataTables](https://appseed.us/developer-tools/django-dynamic-datatables/) Library
   - URI: `/datatb/product/` 
 
 ## [1.0.17] 2023-06-13
