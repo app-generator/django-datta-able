@@ -6,3 +6,6 @@ django-admin-datta==1.0.10
 
 # psycopg2-binary
 # mysqlclient
+
+# Tooling
+django-dynamic-datatb==1.0.24
