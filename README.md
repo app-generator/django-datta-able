@@ -92,6 +92,14 @@ $ python manage.py migrate
 
 <br />
 
+> Generate API
+
+```bash
+$ python manage.py generate-api -f
+```
+
+<br />
+
 > Start the APP
 
 ```bash
