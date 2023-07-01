@@ -9,3 +9,4 @@ django-admin-datta==1.0.10
 
 # Tooling
 django-dynamic-datatb==1.0.24
+django-api-generator==1.0.17
