@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.20] 2023-07-01
+### Changes
+
+- Integrate [API Generator](https://appseed.us/developer-tools/django-api-generator/)
+  - URI: `/api/product/` 
+- HOME.Admin
+  - Automatic Models Registration  
+
 ## [1.0.19] 2023-07-01
 ### Changes
 
