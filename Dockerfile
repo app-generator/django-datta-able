@@ -16,7 +16,9 @@ COPY . .
 RUN chmod +x /app/entrypoint.sh
 
 # running migrations
+RUN python manage.py makemigrations
 RUN python manage.py migrate
+RUN python manage.py generate-api -f
 
 # entrypoint
 CMD ["bash", "-c", "/app/entrypoint.sh"]
