@@ -27,7 +27,11 @@
         </li>
         <li class="nav-item {% if 'tables' in segment %}active{% endif %}">
           <a href="{% url 'tables' %}" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-server"></i></span><span class="pcoded-mtext">DTables</span></a>
+                class="feather icon-server text-c-green"></i></span><span class="pcoded-mtext">Dynamic Tables</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="/api/product/" class="nav-link "><span class="pcoded-micon"><i
+                class="feather icon-zap text-c-green"></i></span><span class="pcoded-mtext">Generated API</span></a>
         </li>
 
         {% if not request.user.is_authenticated %}

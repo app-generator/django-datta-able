@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.21] 2023-07-01
+### Changes
+
+- Sidebar Added Icons (minor)
+  - [API Generator](https://appseed.us/developer-tools/django-api-generator/)
+  - [Dynamic DataTables](https://appseed.us/developer-tools/django-dynamic-datatables/)  
+  
 ## [1.0.20] 2023-07-01
 ### Changes
 
