@@ -30,7 +30,7 @@ if not SECRET_KEY:
     SECRET_KEY = ''.join(random.choice( string.ascii_lowercase  ) for i in range( 32 ))
 
 # Render Deployment Code
-DEBUG = 'RENDER' not in os.environ
+DEBUG = True # 'RENDER' not in os.environ
 
 # HOSTs List
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
