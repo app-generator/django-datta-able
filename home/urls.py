@@ -2,9 +2,11 @@ from django.urls import path
 from admin_datta import views
 from django.contrib.auth import views as auth_views
 
+from .views import tables
 
 urlpatterns = [
-  path('', views.index, name='index'),
+  path(''       , views.index, name='index'),
+  path('tables/', tables     , name='tables'),
 
   # Components
   path('components/button/', views.bc_button, name='bc_button'),

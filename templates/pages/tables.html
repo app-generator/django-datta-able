@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block breadcrumbs %}{% endblock breadcrumbs %}
+
+{% block extrastyle %}
+
+<style>
+
+.iframe-container {display: flex; width: 100%; height: 100%; flex-direction: column; overflow: hidden;}
+.parent-fit { flex-grow: 1; border: none; margin: 0; padding: 0; height: 100vh; }
+
+</style>
+
+{% endblock extrastyle %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12"> 
+    <div class="iframe-container">
+      <iframe class="parent-fit" src="/datatb/product/"></iframe>    
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

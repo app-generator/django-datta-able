@@ -25,6 +25,10 @@
             <span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span>
           </a>
         </li>
+        <li class="nav-item {% if 'tables' in segment %}active{% endif %}">
+          <a href="{% url 'tables' %}" class="nav-link "><span class="pcoded-micon"><i
+                class="feather icon-server"></i></span><span class="pcoded-mtext">DTables</span></a>
+        </li>
 
         {% if not request.user.is_authenticated %}
         <li
