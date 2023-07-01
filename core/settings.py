@@ -57,8 +57,13 @@ INSTALLED_APPS = [
 
     "home",
 
-    # Tooling
-    'django_dyn_dt',  # <-- NEW: Dynamic_DT
+    # Tooling Dynamic_DT
+    'django_dyn_dt',             # <-- NEW: Dynamic_DT
+
+    # Tooling API-GEN
+    'django_api_gen',            # Django API GENERATOR  # <-- NEW
+    'rest_framework',            # Include DRF           # <-- NEW 
+    'rest_framework.authtoken',  # Include DRF Auth      # <-- NEW     
 ]
 
 MIDDLEWARE = [
@@ -180,9 +185,23 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# *** DYNAMIC_DATATB Settings ***
+# ### DYNAMIC_DATATB Settings ###
 DYNAMIC_DATATB = {
     # SLUG -> Import_PATH 
     'product'  : "home.models.Product",
 }
-# *** *** *** *** *** ***
+########################################
+
+# ### API-GENERATOR Settings ###
+API_GENERATOR = {
+    # SLUG -> Import_PATH 
+    'product'  : "home.models.Product",
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
+########################################
