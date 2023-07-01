@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.19] 2023-07-01
+### Changes
+
+- Added Embeded [Dynamic DataTables](https://appseed.us/developer-tools/django-dynamic-datatables/) 
+  - URI: `/tables/` 
+
 ## [1.0.18] 2023-06-28
 ### Changes
 
