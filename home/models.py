@@ -7,7 +7,6 @@ class Product(models.Model):
     name  = models.CharField(max_length = 100) 
     info  = models.CharField(max_length = 100, default = '')
     price = models.IntegerField(blank=True, null=True)
-    description = models.CharField(max_length = 250, default = '')
 
     def __str__(self):
         return self.name
