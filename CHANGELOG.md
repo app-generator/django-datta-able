@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.22] 2023-07-03
+### Changes
+
+- Bump [Dynamic DataTables](https://appseed.us/developer-tools/django-dynamic-datatables/) to `v1.0.25`
+  - Fix the Exports: `PDF` & `CSV`
+
 ## [1.0.21] 2023-07-01
 ### Changes
 

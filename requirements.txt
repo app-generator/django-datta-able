@@ -8,5 +8,5 @@ django-admin-datta==1.0.10
 # mysqlclient
 
 # Tooling
-django-dynamic-datatb==1.0.24
+django-dynamic-datatb==1.0.25
 django-api-generator==1.0.17
