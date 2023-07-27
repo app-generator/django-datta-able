@@ -8,11 +8,6 @@
   <!-- [ Main Content ] start -->
   <div class="row">
     
-    {% for unit in units %}
-    >> {{ unit.site_id }}, {{ unit.site_name }}, {{ unit.sitecol }}, {{ unit.lat }}, {{ unit.long }}
-    <br/>
-    {% endfor %}
-
     <!--[ daily sales section ] start-->
     <div class="col-md-6 col-xl-4">
       <div class="card daily-sales">
@@ -86,98 +81,145 @@
     <!--[ Recent Users ] start-->
     <div class="col-xl-8 col-md-6">
       <div class="card Recent-Users">
-        <div class="card-header">
-          <h5>Recent Users</h5>
-        </div>
-        <div class="card-block px-0 py-3">
-          <div class="table-responsive">
-            <table class="table table-hover">
-              <tbody>
-                <tr class="unread">
-                  <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-1.jpg' %}"
-                      alt="activity-user">
-                  </td>
-                  <td>
-                    <h6 class="mb-1">Isabella Christensen</h6>
-                    <p class="m-0">Lorem Ipsum is simply…</p>
-                  </td>
-                  <td>
-                    <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>11
-                      MAY 12:56</h6>
-                  </td>
-                  <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
-                      class="label theme-bg text-white f-12">Approve</a>
-                  </td>
-                </tr>
-                <tr class="unread">
-                  <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-2.jpg' %}"
-                      alt="activity-user">
-                  </td>
-                  <td>
-                    <h6 class="mb-1">Mathilde Andersen</h6>
-                    <p class="m-0">Lorem Ipsum is simply text of…</p>
-                  </td>
-                  <td>
-                    <h6 class="text-muted"><i class="fas fa-circle text-c-red f-10 m-r-15"></i>11 MAY
-                      10:35</h6>
-                  </td>
-                  <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
-                      class="label theme-bg text-white f-12">Approve</a>
-                  </td>
-                </tr>
-                <tr class="unread">
-                  <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-3.jpg' %}"
-                      alt="activity-user">
-                  </td>
-                  <td>
-                    <h6 class="mb-1">Karla Sorensen</h6>
-                    <p class="m-0">Lorem Ipsum is simply…</p>
-                  </td>
-                  <td>
-                    <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>9 MAY
-                      17:38</h6>
-                  </td>
-                  <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
-                      class="label theme-bg text-white f-12">Approve</a>
-                  </td>
-                </tr>
-                <tr class="unread">
-                  <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-1.jpg' %}"
-                      alt="activity-user">
-                  </td>
-                  <td>
-                    <h6 class="mb-1">Ida Jorgensen</h6>
-                    <p class="m-0">Lorem Ipsum is simply text of…</p>
-                  </td>
-                  <td>
-                    <h6 class="text-muted f-w-300"><i class="fas fa-circle text-c-red f-10 m-r-15"></i>19
-                      MAY
-                      12:56</h6>
-                  </td>
-                  <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
-                      class="label theme-bg text-white f-12">Approve</a>
-                  </td>
-                </tr>
-                <tr class="unread">
-                  <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-2.jpg' %}"
-                      alt="activity-user">
-                  </td>
-                  <td>
-                    <h6 class="mb-1">Albert Andersen</h6>
-                    <p class="m-0">Lorem Ipsum is simply dummy…</p>
-                  </td>
-                  <td>
-                    <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>21
-                      July 12:56</h6>
-                  </td>
-                  <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
-                      class="label theme-bg text-white f-12">Approve</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+        {% if products %}
+
+          <div class="card-header">
+            <h5>products</h5>
           </div>
-        </div>
+          <div class="card-block px-0 py-3">
+            <div class="table-responsive">
+              <table class="table table-hover">
+
+                <tbody>
+                  {% for p in products %}
+
+                    <tr class="unread">
+                      <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-1.jpg' %}"
+                          alt="activity-user">
+                      </td>
+                      <td>
+                        <h6 class="mb-1">{{ p.name }}</h6>
+                        <p class="m-0">{{ p.info }}</p>
+                      </td>
+                      <td>
+                        <h6 class="text-muted">
+                          <i class="fa-solid fa-cart-shopping"></i>
+                          <i class="fas fa-tag text-c-green f-10 m-r-15"></i>
+                          ${{ p.price }}
+                        </h6>
+                      </td>
+                      <td>
+                        <a href="#" class="label theme-bg2 text-white f-12">View</a>
+                        <a href="#" class="label theme-bg text-white f-12">Delete</a>
+                      </td>
+                    </tr>
+
+                  {% endfor %}
+                </tbody>
+                
+              </table>
+            </div>
+          </div>
+
+        {% else %}
+        
+          <div class="card-header">
+            <h5>Recent Users</h5>
+          </div>
+          <div class="card-block px-0 py-3">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <tbody>
+                  <tr class="unread">
+                    <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-1.jpg' %}"
+                        alt="activity-user">
+                    </td>
+                    <td>
+                      <h6 class="mb-1">Isabella Christensen</h6>
+                      <p class="m-0">Lorem Ipsum is simply…</p>
+                    </td>
+                    <td>
+                      <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>11
+                        MAY 12:56</h6>
+                    </td>
+                    <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
+                        class="label theme-bg text-white f-12">Approve</a>
+                    </td>
+                  </tr>
+                  <tr class="unread">
+                    <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-2.jpg' %}"
+                        alt="activity-user">
+                    </td>
+                    <td>
+                      <h6 class="mb-1">Mathilde Andersen</h6>
+                      <p class="m-0">Lorem Ipsum is simply text of…</p>
+                    </td>
+                    <td>
+                      <h6 class="text-muted"><i class="fas fa-circle text-c-red f-10 m-r-15"></i>11 MAY
+                        10:35</h6>
+                    </td>
+                    <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
+                        class="label theme-bg text-white f-12">Approve</a>
+                    </td>
+                  </tr>
+                  <tr class="unread">
+                    <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-3.jpg' %}"
+                        alt="activity-user">
+                    </td>
+                    <td>
+                      <h6 class="mb-1">Karla Sorensen</h6>
+                      <p class="m-0">Lorem Ipsum is simply…</p>
+                    </td>
+                    <td>
+                      <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>9 MAY
+                        17:38</h6>
+                    </td>
+                    <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
+                        class="label theme-bg text-white f-12">Approve</a>
+                    </td>
+                  </tr>
+                  <tr class="unread">
+                    <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-1.jpg' %}"
+                        alt="activity-user">
+                    </td>
+                    <td>
+                      <h6 class="mb-1">Ida Jorgensen</h6>
+                      <p class="m-0">Lorem Ipsum is simply text of…</p>
+                    </td>
+                    <td>
+                      <h6 class="text-muted f-w-300"><i class="fas fa-circle text-c-red f-10 m-r-15"></i>19
+                        MAY
+                        12:56</h6>
+                    </td>
+                    <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
+                        class="label theme-bg text-white f-12">Approve</a>
+                    </td>
+                  </tr>
+                  <tr class="unread">
+                    <td><img class="rounded-circle" style="width:40px;" src="{% static 'assets/images/user/avatar-2.jpg' %}"
+                        alt="activity-user">
+                    </td>
+                    <td>
+                      <h6 class="mb-1">Albert Andersen</h6>
+                      <p class="m-0">Lorem Ipsum is simply dummy…</p>
+                    </td>
+                    <td>
+                      <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>21
+                        July 12:56</h6>
+                    </td>
+                    <td><a href="#!" class="label theme-bg2 text-white f-12">Reject</a><a href="#!"
+                        class="label theme-bg text-white f-12">Approve</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        {% endif %}
+
+
       </div>
     </div>
     <!--[ Recent Users ] end-->
