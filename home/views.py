@@ -6,9 +6,15 @@ from django.contrib.auth import logout
 
 from django.contrib.auth.decorators import login_required
 
+from .models import Site
+
 def index(request):
+
+  units = Site.objects.all().values()
+
   context = {
-    'segment': 'index'
+    'segment': 'index',
+    'units'  : units    
   }
   return render(request, "pages/index.html", context)
 
