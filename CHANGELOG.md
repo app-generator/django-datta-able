@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.23] 2023-07-27
+### Changes
+
+- Fixes:
+  - #27 - Form field not displaying in Page
+  - #28 - Var not displaying in index.html
+  - #32 - Data not displayed in Index.html
+
 ## [1.0.22] 2023-07-03
 ### Changes
 
