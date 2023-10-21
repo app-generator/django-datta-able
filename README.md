@@ -7,7 +7,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 
 <br />
 
-## F
+## Features
 
 > `Have questions?` Contact **[Support](https://appseed.us/support/)** (Email & Discord) provided by **AppSeed**
 
