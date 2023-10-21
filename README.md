@@ -5,7 +5,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 - 👉 [Datta Able Django](https://appseed.us/product/datta-able/django/) - `Product page` 
 - 👉 [Datta Able Django](https://django-datta-able.appseed-srv1.com/) - `LIVE demo` 
 
-<br />
+---
 
 ## Features
 
