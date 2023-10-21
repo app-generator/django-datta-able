@@ -15,7 +15,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | --------------------------------------| --------------------------------------| --------------------------------------|
 | ✓ **Django 4.1.12**                   | **Everything in Free**, plus:                                        | **Everything in PRO**, plus:       |
 | ✓ Best Practices                      | ✅ `OAuth` Google, GitHub                                            | ✅ **1mo Custom Development**     | 
-| ✓ Bootstrap 4, Datta Able Design      | ✅ Extended User Model                                               | ✅ **Dedicated Developer**        |
+| ✓ Bootstrap 4, `Datta Able` Design      | ✅ Extended User Model                                               | ✅ **Dedicated Developer**        |
 | ✓ API Generator                       | ✅ Users Management                                                  | ✅ Weekly Sprints                 |
 | ✓ Dynamic DataTables                  | ✅ Private REPO Access                                               | ✅ Technical SPECS                |
 | ✓ `Docker`                            | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)  | ✅ Documentation                  |
