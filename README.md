@@ -13,14 +13,14 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 
 | Free Version                          | [PRO Version](https://appseed.us/product/datta-able-pro/django/)    | 🚀 Custom - $1999 (plus VAT)         |  
 | --------------------------------------| --------------------------------------| --------------------------------------|
-| ✓ **Django 4.1.12**                   | **Everything in Free**, plus:                                        | **Everything in PRO**, plus:       |
-| ✓ Best Practices                      | ✅ `OAuth` Google, GitHub                                            | ✅ **1mo Custom Development**     | 
-| ✓ Bootstrap 4, `Datta Able` Design      | ✅ Extended User Model                                               | ✅ **Dedicated Developer**        |
-| ✓ API Generator                       | ✅ Users Management                                                  | ✅ Weekly Sprints                 |
-| ✓ Dynamic DataTables                  | ✅ Private REPO Access                                               | ✅ Technical SPECS                |
-| ✓ `Docker`                            | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)  | ✅ Documentation                  |
-| ✓ `CI/CD` Flow via Render             | ✅ Deployment Assistance                                             | ✅ **30 days Delivery Warranty**  |
-| ✓ `Free Support`                      | -                                                                     |  -                                |
+| ✓ **Django 4.1.12**                   | **Everything in Free**, plus:                                        | **Everything in PRO**, plus:      |
+| ✓ Best Practices                      | ✅ **Premium Bootstrap 5 Design**                                    | ✅ **1mo Custom Development**     | 
+| ✓ Bootstrap 4, `Datta Able` Design    | ✅ `OAuth` Google, GitHub                                            | ✅ **Dedicated Developer**        |
+| ✓ API Generator                       | ✅ `Extended User Model`                                             | ✅ Weekly Sprints                 |
+| ✓ Dynamic DataTables                  | ✅ `Users Management`                                                | ✅ Technical SPECS                |
+| ✓ `Docker`                            | ✅ `Private REPO Access`                                             | ✅ Documentation                  |
+| ✓ `CI/CD` Flow via Render             | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)  | ✅ **30 days Delivery Warranty**  |
+| ✓ `Free Support`                      | ✅ Deployment Assistance                                             |  -                                |
 | ------------------------------------  | ------------------------------------                                  | ------------------------------------|
 | ✓ [LIVE Demo](https://django-datta-able.appseed-srv1.com/)  | 🚀 [LIVE Demo](https://django-datta-able-enh.appseed-srv1.com/) | 🛒 `Order`: **[$1999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
