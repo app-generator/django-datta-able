@@ -1,5 +1,5 @@
 # Core
-django==4.1.12
+django==4.1.13
 python-dotenv==1.0.0
 
 # UI 
