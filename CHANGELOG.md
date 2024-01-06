@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.0.25] 2024-01-06
+### Changes
+
+- Fix Docker Script
+
 ## [1.0.24] 2023-10-21
 ### Changes
 

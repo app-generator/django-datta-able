@@ -4,21 +4,20 @@ FROM python:3.9
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /app
-
 COPY requirements.txt .
+
 # install python dependencies
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN chmod +x /app/entrypoint.sh
-
-# running migrations
+# Running Migrations
 RUN python manage.py makemigrations
 RUN python manage.py migrate
+
+# Generate API
 RUN python manage.py generate-api -f
 
-# entrypoint
-CMD ["bash", "-c", "/app/entrypoint.sh"]
+# gunicorn
+CMD ["gunicorn", "--config", "gunicorn-cfg.py", "core.wsgi"]
