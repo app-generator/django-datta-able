@@ -13,17 +13,17 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 
 | Free Version                          | [PRO Version](https://appseed.us/product/datta-able-pro/django/)    | 🚀 Custom - $3,999         |  
 | --------------------------------------| --------------------------------------| --------------------------------------|
-| ✓ **Django 4.1.12**                   | **Everything in Free**, plus:                                                                            | **Everything in PRO**, plus:      |
-| ✓ Best Practices                      | ✅ **Premium Bootstrap 5 Design**                                                                        | ✅ **1mo Custom Development**     | 
-| ✓ Bootstrap 4, `Datta Able` Design    | ✅ `OAuth` Google, GitHub                                                                                | ✅ **Dedicated Developer**        |
-| ✓ API Generator                       | ✅ `API`, **[Charts](https://django-datta-enh-latest.onrender.com/charts/)**                             | ✅ Weekly Sprints                 |
-| ✓ Simple DataTables                   | ✅ **[DataTables](https://django-datta-enh-latest.onrender.com/tables/)** (Filters, Export, Server-Side)  | ✅ Technical SPECS                |
-| ✓ `Docker`                            | ✅ **Celery**                                                                                             | ✅ Documentation                  |
-| ✓ `CI/CD` Flow via Render             | ✅ **[Media Files Manager](https://django-datta-enh-latest.onrender.com/file-manager)**                   | ✅ **30 days Delivery Warranty**  |
-| -                                     | ✅ **[Extended User Profiles](https://django-datta-enh-latest.onrender.com/users/profile/)**              |  -                                |
-| -                                     | ✅ `Private REPO Access`                                                                                  |  -                                |
-| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)                                       |  -                                |
-| -                                     | ✅ Deployment Assistance                                                                                  |  -                                |
+| ✓ **Django 4.1.12**                   | **Everything in Free**, plus:                                                                 | **Everything in PRO**, plus:      |
+| ✓ Best Practices                      | ✅ **Premium Bootstrap 5 Design**                                                             | ✅ **1mo Custom Development**     | 
+| ✓ Bootstrap 4, `Datta Able` Design    | ✅ `OAuth` Google, GitHub                                                                     | ✅ **Dedicated Developer**        |
+| ✓ API Generator                       | ✅ `API`, **[Charts](https://django-datta-enh-latest.onrender.com/charts/)**                  | ✅ Weekly Sprints                 |
+| ✓ Simple DataTables                   | ✅ **[DataTables](https://django-datta-enh-latest.onrender.com/tables/)** (Filters, Export)   | ✅ Technical SPECS                |
+| ✓ `Docker`                            | ✅ **Celery**                                                                                 | ✅ Documentation                  |
+| ✓ `CI/CD` Flow via Render             | ✅ **[Media Files Manager](https://django-datta-enh-latest.onrender.com/file-manager)**       | ✅ **30 days Delivery Warranty**  |
+| -                                     | ✅ **[Extended User Profiles](https://django-datta-enh-latest.onrender.com/users/profile/)**  |  -                                |
+| -                                     | ✅ `Private REPO Access`                                                                      |  -                                |
+| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)                           |  -                                |
+| -                                     | ✅ Deployment Assistance                                                                      |  -                                |
 | ------------------------------------  | ------------------------------------                                  | ------------------------------------|
 | ✓ [LIVE Demo](https://django-datta-able.appseed-srv1.com/)  | 🚀 [LIVE Demo](https://django-datta-enh-latest.onrender.com/) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
