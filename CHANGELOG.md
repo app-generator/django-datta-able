@@ -4,11 +4,11 @@
 ### Changes
 
 - Update README: [Datta Able PRO](https://appseed.us/product/datta-able-pro/django/) Version, List features
-  - `API`, **[Charts](https://django-datta-enh-latest.onrender.com/charts/)** 
-  - **[DataTables](https://django-datta-enh-latest.onrender.com/tables/)** (Filters, Export)
+  - `API`, **[Charts](https://django-datta-able-pro.onrender.com/charts/)** 
+  - **[DataTables](https://django-datta-able-pro.onrender.com/tables/)** (Filters, Export)
   - **Celery**
-  - **[Media Files Manager](https://django-datta-enh-latest.onrender.com/file-manager)**
-  - **[Extended User Profiles](https://django-datta-enh-latest.onrender.com/users/profile/)**
+  - **[Media Files Manager](https://django-datta-able-pro.onrender.com/file-manager)**
+  - **[Extended User Profiles](https://django-datta-able-pro.onrender.com/users/profile/)**
 
 ## [1.0.26] 2024-01-31
 ### Changes
