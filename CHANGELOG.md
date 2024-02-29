@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.29] 2023-02-29
+### Changes
+
+- Update PRO DEMO Link
+  - [Datta Able PRO Django](https://django-datta-pro.onrender.com/)
+
 ## [1.0.28] 2023-02-14
 ### Changes
 
@@ -10,11 +16,11 @@
 ### Changes
 
 - Update README: [Datta Able PRO](https://appseed.us/product/datta-able-pro/django/) Version, List features
-  - `API`, **[Charts](https://django-datta-able-pro.onrender.com/charts/)** 
-  - **[DataTables](https://django-datta-able-pro.onrender.com/tables/)** (Filters, Export)
+  - `API`, **Charts** 
+  - **DataTables** (Filters, Export)
   - **Celery**
-  - **[Media Files Manager](https://django-datta-able-pro.onrender.com/file-manager)**
-  - **[Extended User Profiles](https://django-datta-able-pro.onrender.com/users/profile/)**
+  - **Media Files Manager**
+  - **Extended User Profiles**
 
 ## [1.0.26] 2024-01-31
 ### Changes
