@@ -4,7 +4,7 @@
 ### Changes
 
 - Update [Custom Development](https://appseed.us/custom-development/) Section
-  - New Pricing: `3,999`
+  - New Pricing: `$3,999`
 
 ## [1.0.29] 2023-02-29
 ### Changes
