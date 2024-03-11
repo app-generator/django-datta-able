@@ -21,9 +21,11 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | ✓ `Docker`                            | ✅ **Celery**                                                                          | ✅ Documentation                    |
 | ✓ `CI/CD` Flow via Render             | ✅ **Media Files Manager**                                                             | ✅ **30 days Delivery Warranty**    |
 | -                                     | ✅ **Extended User Profiles**                                                          |  -                                   |
+| -                                     | ✅ `Automated e2e Tests` (HTML and Video reports)                                      |  -                                   |
 | -                                     | ✅ `Private REPO Access`                                                               |  -                                   |
 | -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)                    |  -                                   |
 | -                                     | ✅ Deployment Assistance                                                               |  -                                   |
+| -                                     | -                                                                                       |  -                                   |
 | ------------------------------------  | ------------------------------------                                                    | ------------------------------------|
 | ✓ [LIVE Demo](https://django-datta-able.appseed-srv1.com/)  | 🚀 [LIVE Demo](https://django-datta-pro.onrender.com/) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 

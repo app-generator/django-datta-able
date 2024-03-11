@@ -1,5 +1,15 @@
 # Change Log
 
+## [1.0.31] 2024-03-11
+### Changes
+
+- Update RM [PRO Version](https://appseed.us/product/datta-able-pro/django/)
+  - Added Automatized Tests
+    - Linux
+    - Windows
+  - Fixes:
+    - dataTables layout
+
 ## [1.0.30] 2024-03-05
 ### Changes
 
