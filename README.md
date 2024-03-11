@@ -21,7 +21,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | ✓ `Docker`                            | ✅ **Celery**                                                                          | ✅ Documentation                    |
 | ✓ `CI/CD` Flow via Render             | ✅ **Media Files Manager**                                                             | ✅ **30 days Delivery Warranty**    |
 | -                                     | ✅ **Extended User Profiles**                                                          |  -                                   |
-| -                                     | ✅ `Automated e2e Tests` (Video Reports)                                               |  -                                   |
+| -                                     | ✅ **Automated e2e Tests**                                                             |  -                                   |
 | -                                     | ✅ `Private REPO Access`                                                               |  -                                   |
 | -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)                    |  -                                   |
 | -                                     | ✅ Deployment Assistance                                                               |  -                                   |
