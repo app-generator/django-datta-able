@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.0.31] 2024-03-16
+## [1.0.32] 2024-03-16
 ### Changes
 
 - Update [PRO Version](https://appseed.us/product/datta-able-pro/django/) Section
