@@ -24,7 +24,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | -                                    | ✅ **Automated e2e Tests**                                                        |  -                                   |
 | -                                    | ✅ `Private REPO Access`                                                          |  -                                   |
 | -                                    | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)               |  -                                   |
-| -                                    | ✅ Deployment Assistance                                                          |  -                                   |
+| -                                    | ✅ **[Deployment Assistance](https://deploypro.dev/)** - `AWS`, `DO`, `Azure`     |  -                                   |
 | -                                    | ✅ **[Latest Update](https://github.com/app-generator/django-datta-able-pro/blob/main/CHANGELOG.md)**: `2024-03-16`  |  -                                   |
 | ------------------------------------  | ------------------------------------                                                    | ------------------------------------|
 | ✓ [LIVE Demo](https://django-datta-able.appseed-srv1.com/)  | 🚀 [LIVE Demo](https://django-datta-pro.onrender.com/) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
