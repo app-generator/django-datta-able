@@ -15,7 +15,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | --------------------------------------| --------------------------------------| --------------------------------------|
 | ✓ **Django 4.2.9**                   | **Everything in Free**, plus:                                                          | **Everything in PRO**, plus:         |
 | ✓ Bootstrap 4 UI                     | ✅ **PRO Bootstrap 5 UI**, `Dark-Mode`                                        | ✅ **1mo Custom Development**       | 
-| ✓ API Generator                      | ✅ `OAuth` Google, GitHub                                                             | ✅ **Team**: PM, Developer, Tester  |
+| ✓ API Generator                      | ✅ **OAuth** `Google`, `GitHub`                                                             | ✅ **Team**: PM, Developer, Tester  |
 | ✓ Simple DataTables                  | ✅ `API`, **[Charts](https://django-datta-pro.onrender.com/charts/)**                 | ✅ Weekly Sprints                   |
 | ✓ `Docker`                           | ✅ **[Enhanced DataTables](https://django-datta-pro.onrender.com/tables/)**           | ✅ Technical Specs                  |
 | ✓ `CI/CD` Flow via Render            | ✅ **Celery**                                                                         | ✅ Documentation                    |
