@@ -4,10 +4,10 @@
   <div class="navbar-wrapper">
     <div class="navbar-brand header-logo">
       <a href="{% url 'index' %}" class="b-brand">
-        <div class="b-bg">
+        {% comment %} <div class="b-bg">
           <i class="feather icon-trending-up"></i>
-        </div>
-        <span class="b-title">Datta Able</span>
+        </div> {% endcomment %}
+        <span class="b-title">WeSecure</span>
       </a>
       <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
     </div>
@@ -25,28 +25,16 @@
             <span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item {% if 'tables' in segment %}active{% endif %}">
+        {% comment %} <li class="nav-item {% if 'tables' in segment %}active{% endif %}">
           <a href="{% url 'tables' %}" class="nav-link "><span class="pcoded-micon"><i
                 class="feather icon-server text-c-green"></i></span><span class="pcoded-mtext">Dynamic Tables</span></a>
         </li>
-        <li class="nav-item">
-          <a target="_blank" href="/api/product/" class="nav-link "><span class="pcoded-micon"><i
+        <li class="nav-item"> {% endcomment %}
+          {% comment %} <a target="_blank" href="/api/product/" class="nav-link "><span class="pcoded-micon"><i
                 class="feather icon-zap text-c-green"></i></span><span class="pcoded-mtext">Generated API</span></a>
-        </li>
+        </li> {% endcomment %}
 
-        {% if not request.user.is_authenticated %}
-        <li
-          data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe"
-          class="nav-item pcoded-hasmenu">
-          <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
-          <ul class="pcoded-submenu">
-            <li class=""><a href="{% url 'login' %}" class="">Sign IN</a></li>
-            <li class=""><a href="{% url 'register' %}" class="">Sign UP</a></li>
-          </ul>
-        </li>
-        {% endif %}
-
+        
         {% admin_get_menu as app_list %}
         {% if app_list %}
           {% for app in app_list %}
@@ -79,13 +67,13 @@
 
         {% if request.user.is_authenticated and not request.user.is_superuser %}
         <li class="nav-item pcoded-menu-caption">
-          <label>UI Element</label>
+          <label>SCANNIG</label>
         </li>
         <li
           data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds"
           class="nav-item pcoded-hasmenu {% if 'basic_components' in parent %}active pcoded-trigger{% endif %}">
           <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-box"></i></span><span class="pcoded-mtext">Components</span></a>
+                class="feather icon-box"></i></span><span class="pcoded-mtext">NEW SCAN</span></a>
           <ul class="pcoded-submenu">
             <li class="{% if 'button' in segment %}active{% endif %}"><a href="{% url 'bc_button' %}" class="">Button</a></li>
             <li class="{% if 'badges' in segment %}active{% endif %}"><a href="{% url 'bc_badges' %}" class="">Badges</a></li>
