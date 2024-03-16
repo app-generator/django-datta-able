@@ -14,18 +14,18 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | Free Version                          | [PRO Version](https://appseed.us/product/datta-able-pro/django/)    | [Custom Development](https://appseed.us/custom-development/) |  
 | --------------------------------------| --------------------------------------| --------------------------------------|
 | ✓ **Django 4.2.9**                   | **Everything in Free**, plus:                                                          | **Everything in PRO**, plus:         |
-| ✓ Best Practices                      | ✅ **Premium Bootstrap 5 Design**                                                      | ✅ **1mo Custom Development**       | 
-| ✓ Bootstrap 4, `Datta Able` Design    | ✅ `OAuth` Google, GitHub                                                              | ✅ **Team**: PM, Developer, Tester  |
-| ✓ API Generator                       | ✅ `API`, **[Charts](https://django-datta-pro.onrender.com/charts/)**                  | ✅ Weekly Sprints                   |
-| ✓ DataTables                          | ✅ **[Enhanced DataTables](https://django-datta-pro.onrender.com/tables/)**            | ✅ Technical SPECS                  |
-| ✓ `Docker`                            | ✅ **Celery**                                                                          | ✅ Documentation                    |
-| ✓ `CI/CD` Flow via Render             | ✅ **Media Files Manager**                                                             | ✅ **30 days Delivery Warranty**    |
+| ✓ Best Practices                      | ✅ **Premium Bootstrap 5 Design**, `Dark-Mode`                                        | ✅ **1mo Custom Development**       | 
+| ✓ Bootstrap 4 Design                  | ✅ `OAuth` Google, GitHub                                                             | ✅ **Team**: PM, Developer, Tester  |
+| ✓ API Generator                       | ✅ `API`, **[Charts](https://django-datta-pro.onrender.com/charts/)**                 | ✅ Weekly Sprints                   |
+| ✓ Simple DataTables                   | ✅ **[Enhanced DataTables](https://django-datta-pro.onrender.com/tables/)**           | ✅ Technical Specs                  |
+| ✓ `Docker`                            | ✅ **Celery**                                                                         | ✅ Documentation                    |
+| ✓ `CI/CD` Flow via Render             | ✅ **Media Files Manager**                                                            | ✅ **30 days Delivery Warranty**    |
 | -                                     | ✅ **Extended User Profiles**                                                          |  -                                   |
 | -                                     | ✅ **Automated e2e Tests**                                                             |  -                                   |
 | -                                     | ✅ `Private REPO Access`                                                               |  -                                   |
 | -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)                    |  -                                   |
 | -                                     | ✅ Deployment Assistance                                                               |  -                                   |
-| -                                     | -                                                                                       |  -                                   |
+| -                                     | ✅ **Latest Update**: `2024-03-16` - [CHANGELOG](https://github.com/app-generator/django-datta-able-pro/blob/main/CHANGELOG.md)  |  -                                   |
 | ------------------------------------  | ------------------------------------                                                    | ------------------------------------|
 | ✓ [LIVE Demo](https://django-datta-able.appseed-srv1.com/)  | 🚀 [LIVE Demo](https://django-datta-pro.onrender.com/) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
