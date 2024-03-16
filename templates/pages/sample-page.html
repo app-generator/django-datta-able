@@ -4,19 +4,27 @@
 {% block content %}
 
   <!-- [ Main Content ] start -->
-  <div class="row">
-    <div class="col-sm-12">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
       <div class="card">
-        <div class="card-header">
-          <h5>Hello card</h5>
-        </div>
-        <div class="card-block">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          </p>
+        <div class="card-body">
+          <form action="" method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+              <input type="text" name="url" class="form-control" placeholder="Enter your URL...">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+          <!-- Display scan result -->
+          {% if scan_result %}
+          <div class="alert alert-info" role="alert">
+            <p>URL: {{ scan_result.url }}</p>
+            <p>Scan Date: {{ scan_result.scan_date }}</p>
+            <p>Detections: {{ scan_result.detections }}</p>
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>

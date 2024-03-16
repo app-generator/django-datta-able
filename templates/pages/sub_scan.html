@@ -1,0 +1,81 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <!-- [ Main Content ] start -->
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <form action="" method="post" id="scanForm">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+              <label for="url">URL:</label>
+              <input type="text" id="url" name="url">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+          <h2>Subdomains of the Entered URL</h2>
+          <ul id="subdomainsList">
+              <!-- Subdomains will be added here dynamically -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+
+  <script>
+    document.getElementById('scanForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const urlToScan = document.getElementById('url').value.trim();
+        if (urlToScan) {
+            fetchSubdomains(urlToScan);
+        }
+    });
+
+    async function fetchSubdomains(url) {
+        const API_KEY = '26b27324b48574bfa21b0084f05f24638ba97fbfb56e9003e5a8cab9c1284e45';
+        const apiUrl = `https://www.virustotal.com/api/v3/domains/${url}`;
+        const headers = {
+            'x-apikey': API_KEY
+        };
+
+        try {
+            const response = await fetch(apiUrl, { headers });
+            const data = await response.json();
+
+            if (response.ok) {
+                const subdomains = data.data.attributes.subdomains;
+                updateSubdomainsList(subdomains);
+            } else {
+                throw new Error(data.error.message);
+            }
+        } catch (error) {
+            console.error('Error fetching subdomains:', error.message);
+        }
+    }
+
+    function updateSubdomainsList(subdomains) {
+      const subdomainsList = document.getElementById('subdomainsList');
+      subdomainsList.innerHTML = ''; // Clear previous content
+  
+      if (typeof subdomains !== 'undefined' && subdomains.length > 0) {
+          subdomains.forEach(subdomain => {
+              const listItem = document.createElement('li');
+              listItem.textContent = subdomain;
+              subdomainsList.appendChild(listItem);
+          });
+      } else {
+          const listItem = document.createElement('li');
+          listItem.textContent = 'No subdomains found';
+          subdomainsList.appendChild(listItem);
+      }
+  }
+  
+  </script>
+
+{% endblock content %}
