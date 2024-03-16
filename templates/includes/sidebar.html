@@ -66,7 +66,7 @@
         {% endif %}
 
         {% if request.user.is_authenticated and not request.user.is_superuser %}
-        <li class="nav-item pcoded-menu-caption">
+        {% comment %} <li class="nav-item pcoded-menu-caption">
           <label>SCANNIG</label>
         </li>
         <li
@@ -77,42 +77,23 @@
           <ul class="pcoded-submenu">
             <li class="{% if 'button' in segment %}active{% endif %}"><a href="{% url 'bc_button' %}" class="">Button</a></li>
             <li class="{% if 'badges' in segment %}active{% endif %}"><a href="{% url 'bc_badges' %}" class="">Badges</a></li>
-            <li class="{% if 'breadcrumbs_&_pagination' in segment %}active{% endif %}"><a href="{% url 'bc_breadcrumb_pagination' %}" class="">Breadcrumb & paggination</a></li>
-            <li class="{% if 'collapse' in segment %}active{% endif %}"><a href="{% url 'bc_collapse' %}" class="">Collapse</a></li>
-            <li class="{% if 'navs_&_tabs' in segment %}active{% endif %}"><a href="{% url 'bc_tabs' %}" class="">Tabs & pills</a></li>
-            <li class="{% if 'typography' in segment %}active{% endif %}"><a href="{% url 'bc_typography' %}" class="">Typography</a></li>
+          
+  
+          </ul> {% endcomment %}
+        </li>
+        <li class="nav-item pcoded-menu-caption">
+          <label>VULNERBILITY SCANNING</label>
+        </li>
 
-
-            <li class="{% if 'feather_icon' in segment %}active{% endif %}"><a href="{% url 'icon_feather' %}" class="">Feather<span
-                  class="pcoded-badge label label-danger">NEW</span></a></li>
-          </ul>
-        </li>
-        <li class="nav-item pcoded-menu-caption">
-          <label>Forms & table</label>
-        </li>
-        <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item {% if 'form_elements' in segment %}active{% endif %}">
-          <a href="{% url 'form_elements' %}" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-file-text"></i></span><span class="pcoded-mtext">Form elements</span></a>
-        </li>
-        <li data-username="Table bootstrap datatable footable" class="nav-item {% if 'basic_tables' in segment %}active{% endif %}">
-          <a href="{% url 'basic_tables' %}" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-server"></i></span><span class="pcoded-mtext">Table</span></a>
-        </li>
-        <li class="nav-item pcoded-menu-caption">
-          <label>Chart & Maps</label>
-        </li>
-        <li data-username="Charts Morris" class="nav-item {% if 'morris_chart' in segment %}active{% endif %}"><a href="{% url 'morris_chart' %}" class="nav-link "><span
-              class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span
-              class="pcoded-mtext">Chart</span></a>
-        </li>
-        <li data-username="Maps Google" class="nav-item {% if 'google_maps' in segment %}active{% endif %}"><a href="{% url 'google_maps' %}" class="nav-link "><span
-              class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
-        </li>
-        <li class="nav-item pcoded-menu-caption">
-          <label>Pages</label>
-        </li>
+        <li data-username="Sample Page" class="nav-item {% if 'sample_page' in segment %}active{% endif %}"><a href="{% url 'sample_page' %}" class="nav-link"><span
+          class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">
+          NORMAL SCANNER</span></a>
+    </li>
+    <li data-username="Sample Page" class="nav-item {% if 'sample_page' in segment %}active{% endif %}"><a href="{% url 'sub_scan' %}" class="nav-link"><span
+      class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">SUB DOMAIN SCANNER</span></a>
+</li>
         <li
-          data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe"
+          {% comment %} data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe"
           class="nav-item pcoded-hasmenu">
           <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
                 class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
@@ -120,7 +101,7 @@
             <li class=""><a href="{% url 'register' %}" class="" target="_blank">Sign up</a></li>
             <li class=""><a href="{% url 'login' %}" class="" target="_blank">Sign in</a></li>
           </ul>
-        </li>
+        </li> {% endcomment %}
         <li data-username="Profile Page" class="nav-item {% if 'profile' in segment %}active{% endif %}"><a href="{% url 'profile' %}" class="nav-link"><span
               class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">Profile
               Page</span></a>
@@ -129,10 +110,7 @@
               class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample
               page</span></a>
         </li>
-        <li data-username="Disabled Menu" class="nav-item disabled"><a href="javascript:" class="nav-link"><span
-              class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Disabled
-              menu</span></a>
-        </li>
+
         {% endif %}
       </ul>
     </div>
