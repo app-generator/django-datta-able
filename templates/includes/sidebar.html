@@ -25,17 +25,7 @@
             <span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span>
           </a>
         </li>
-        {% comment %} <li class="nav-item {% if 'tables' in segment %}active{% endif %}">
-          <a href="{% url 'tables' %}" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-server text-c-green"></i></span><span class="pcoded-mtext">Dynamic Tables</span></a>
-        </li>
-        <li class="nav-item"> {% endcomment %}
-          {% comment %} <a target="_blank" href="/api/product/" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-zap text-c-green"></i></span><span class="pcoded-mtext">Generated API</span></a>
-        </li> {% endcomment %}
-
-        
-        {% admin_get_menu as app_list %}
+       {% admin_get_menu as app_list %}
         {% if app_list %}
           {% for app in app_list %}
             {% if app.has_perms and not app.pinned %}
@@ -66,20 +56,6 @@
         {% endif %}
 
         {% if request.user.is_authenticated and not request.user.is_superuser %}
-        {% comment %} <li class="nav-item pcoded-menu-caption">
-          <label>SCANNIG</label>
-        </li>
-        <li
-          data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds"
-          class="nav-item pcoded-hasmenu {% if 'basic_components' in parent %}active pcoded-trigger{% endif %}">
-          <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-box"></i></span><span class="pcoded-mtext">NEW SCAN</span></a>
-          <ul class="pcoded-submenu">
-            <li class="{% if 'button' in segment %}active{% endif %}"><a href="{% url 'bc_button' %}" class="">Button</a></li>
-            <li class="{% if 'badges' in segment %}active{% endif %}"><a href="{% url 'bc_badges' %}" class="">Badges</a></li>
-          
-  
-          </ul> {% endcomment %}
         </li>
         <li class="nav-item pcoded-menu-caption">
           <label>VULNERBILITY SCANNING</label>
@@ -92,16 +68,7 @@
     <li data-username="Sample Page" class="nav-item {% if 'sample_page' in segment %}active{% endif %}"><a href="{% url 'sub_scan' %}" class="nav-link"><span
       class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">SUB DOMAIN SCANNER</span></a>
 </li>
-        <li
-          {% comment %} data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe"
-          class="nav-item pcoded-hasmenu">
-          <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
-          <ul class="pcoded-submenu">
-            <li class=""><a href="{% url 'register' %}" class="" target="_blank">Sign up</a></li>
-            <li class=""><a href="{% url 'login' %}" class="" target="_blank">Sign in</a></li>
-          </ul>
-        </li> {% endcomment %}
+
         <li data-username="Profile Page" class="nav-item {% if 'profile' in segment %}active{% endif %}"><a href="{% url 'profile' %}" class="nav-link"><span
               class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">Profile
               Page</span></a>
