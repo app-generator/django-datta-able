@@ -15,7 +15,7 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | --------------------------------------| --------------------------------------| --------------------------------------|
 | ✓ **Django 4.2.9**                   | **Everything in Free**, plus:                                                      | **Everything in PRO**, plus:         |
 | ✓ Bootstrap 4 UI                     | ✅ **PRO Bootstrap 5 UI**, `Dark-Mode`                                            | ✅ **1mo Custom Development**       | 
-| ✓ API Generator                      | ✅ **OAuth** `Google`, `GitHub`                                                   | ✅ **Team**: PM, Developer, Tester  |
+| ✓ API Generator                      | ✅ **OAuth** `GitHub`                                                            | ✅ **Team**: PM, Developer, Tester  |
 | ✓ Simple DataTables                  | ✅ `API`, **[Charts](https://django-datta-pro.onrender.com/charts/)**             | ✅ Weekly Sprints                   |
 | ✓ `Docker`                           | ✅ **[Enhanced DataTables](https://django-datta-pro.onrender.com/tables/)**       | ✅ Technical Specs                  |
 | ✓ `CI/CD` Flow via Render            | ✅ **Celery** (`async tasks`)                                                     | ✅ Documentation                    |
@@ -24,8 +24,8 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | -                                    | ✅ **Automated e2e Tests**                                                        |  -                                   |
 | -                                    | ✅ `Private REPO Access`                                                          |  -                                   |
 | -                                    | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)               |  -                                   |
-| -                                    | ✅ [AWS, DO, Azure Deploy Assistance](https://deploypro.dev/)                     |  -                                   |                             |
-| ------------------------------------  | ------------------------------------                                                    | ------------------------------------|
+| -                                    | ✅ [AWS, DO, Azure Deploy Assistance](https://deploypro.dev/)                     |  -                                   |                             
+| ------------------------------------  | ------------------------------------                                             | ------------------------------------|
 | ✓ [LIVE Demo](https://django-datta-able.appseed-srv1.com/)  | 🚀 [LIVE Demo](https://django-datta-pro.onrender.com/) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
   
