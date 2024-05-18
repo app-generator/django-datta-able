@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.0.34] 2024-05-17
+## [1.0.34] 2024-05-18
 ### Changes
 
 - Updated DOCS (readme)
