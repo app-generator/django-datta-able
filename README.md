@@ -19,11 +19,11 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 | ✓ DataTables                         | ✅ `API`, **[Charts](https://django-datta-pro.onrender.com/charts/)**             | ✅ Weekly Sprints                   |
 | ✓ `Docker`                           | ✅ **[Enhanced DataTables](https://django-datta-pro.onrender.com/tables/)**       | ✅ Technical Specs                  |
 | ✓ `CI/CD` Flow via Render            | ✅ **Celery** (`async tasks`)                                                     | ✅ Documentation                    |
-| -                                    | ✅ **Media Files Manager**                                                        | ✅ **30 days Delivery Warranty**    |
+| ✓ `Free Support` (GitHub Issues)     | ✅ **Media Files Manager**                                                        | ✅ **30 days Delivery Warranty**    |
 | -                                    | ✅ **Extended User Profiles**                                                     | ✅ [CI/CD for AWS, DO](https://appseed.us/terms/#section-ci-cd) **(Extra)**    |
 | -                                    | ✅ **Automated e2e Tests**                                                        |  -                                   |
 | -                                    | ✅ `Private REPO Access`                                                          |  -                                   |
-| -                                    | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)               |  -                                   |                            
+| -                                    | ✅ **[Premium Support](https://appseed.us/support/)**                             |  -                                   |                            
 | ------------------------------------  | ------------------------------------                                             | ------------------------------------|
 | ✓ [LIVE Demo](https://django-datta-able.appseed-srv1.com/)  | 🚀 [LIVE Demo](https://django-datta-pro.onrender.com/) | 🛒 `Order`: **[$999](https://appseed.gumroad.com/l/rocket-package-week)** (GUMROAD) |   
 
