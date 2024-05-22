@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     "app",
     'drf_spectacular',
     'drf_spectacular_sidecar',
-
+    'openapi_client',
     # Tooling Dynamic_DT
     'django_dyn_dt',             # <-- NEW: Dynamic_DT
 
