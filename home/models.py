@@ -10,9 +10,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Shipment(models.Model):
-    recipient_address = models.JSONField()
-    package_details = models.JSONField()
-    tracking_number = models.CharField(max_length=50)

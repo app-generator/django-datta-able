@@ -10,14 +10,22 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-import os, random, string, inspect
+import inspect
+import os
+import random
+import string
 from pathlib import Path
+
+import django_dyn_dt
 from dotenv import load_dotenv
 from str2bool import str2bool
 
-import django_dyn_dt
-
 load_dotenv()  # take environment variables from .env.
+
+DHL_API_KEY = os.getenv('DHL_API_KEY')
+DHL_API_SECRET = os.getenv('DHL_API_SECRET')
+DHL_ACCOUNT = os.getenv('DHL_ACCOUNT')
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,7 +40,7 @@ if not SECRET_KEY:
 
 # Enable/Disable DEBUG Mode
 DEBUG = str2bool(os.environ.get('DEBUG'))
-#print(' DEBUG -> ' + str(DEBUG) ) 
+#print(' DEBUG -> ' + str(DEBUG) )
 
 ALLOWED_HOSTS = ['*']
 
@@ -42,7 +50,7 @@ CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://localhost:5085', 'http:
 X_FRAME_OPTIONS = "SAMEORIGIN"
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:    
+if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
@@ -57,14 +65,17 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "home",
+    "app",
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
 
     # Tooling Dynamic_DT
     'django_dyn_dt',             # <-- NEW: Dynamic_DT
 
     # Tooling API-GEN
     'django_api_gen',            # Django API GENERATOR  # <-- NEW
-    'rest_framework',            # Include DRF           # <-- NEW 
-    'rest_framework.authtoken',  # Include DRF Auth      # <-- NEW     
+    'rest_framework',            # Include DRF           # <-- NEW
+    'rest_framework.authtoken',  # Include DRF Auth      # <-- NEW
 ]
 
 MIDDLEWARE = [
@@ -80,7 +91,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "core.urls"
 
-HOME_TEMPLATES      = os.path.join(BASE_DIR, 'templates') 
+HOME_TEMPLATES      = os.path.join(BASE_DIR, 'templates')
 TEMPLATE_DIR_DATATB = os.path.join(BASE_DIR, "django_dyn_dt/templates") # <-- NEW: Dynamic_DT
 
 TEMPLATES = [
@@ -113,15 +124,15 @@ DB_PORT     = os.getenv('DB_PORT'     , None)
 DB_NAME     = os.getenv('DB_NAME'     , None)
 
 if DB_ENGINE and DB_NAME and DB_USERNAME:
-    DATABASES = { 
+    DATABASES = {
       'default': {
-        'ENGINE'  : 'django.db.backends.' + DB_ENGINE, 
+        'ENGINE'  : 'django.db.backends.' + DB_ENGINE,
         'NAME'    : DB_NAME,
         'USER'    : DB_USERNAME,
         'PASSWORD': DB_PASS,
         'HOST'    : DB_HOST,
         'PORT'    : DB_PORT,
-        }, 
+        },
     }
 else:
     DATABASES = {
@@ -172,7 +183,7 @@ DYN_DB_PKG_ROOT = os.path.dirname( inspect.getfile( django_dyn_dt ) ) # <-- NEW:
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(DYN_DB_PKG_ROOT, "templates/static"),                # <-- NEW: Dynamic_DT 
+    os.path.join(DYN_DB_PKG_ROOT, "templates/static"),                # <-- NEW: Dynamic_DT
 )
 
 #if not DEBUG:
@@ -188,21 +199,30 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # ### DYNAMIC_DATATB Settings ###
 DYNAMIC_DATATB = {
-    # SLUG -> Import_PATH 
+    # SLUG -> Import_PATH
     'product'  : "home.models.Product",
 }
 ########################################
 
 # ### API-GENERATOR Settings ###
 API_GENERATOR = {
-    # SLUG -> Import_PATH 
+    # SLUG -> Import_PATH
     'product'  : "home.models.Product",
 }
 
 REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     ],
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'DHL API',
+    'DESCRIPTION': 'DHL API documentation',
+    'VERSION': '1.0.0',
+    # Other settings...
 }
 ########################################

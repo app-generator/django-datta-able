@@ -1,12 +1,27 @@
-from django.shortcuts import render, redirect
-from admin_datta.forms import RegistrationForm, LoginForm, UserPasswordChangeForm, UserPasswordResetForm, UserSetPasswordForm
-from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordResetConfirmView, PasswordResetView
-from django.views.generic import CreateView
+from admin_datta.forms import (
+  LoginForm,
+  RegistrationForm,
+  UserPasswordChangeForm,
+  UserPasswordResetForm,
+  UserSetPasswordForm,
+)
 from django.contrib.auth import logout
-
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import (
+  LoginView,
+  PasswordChangeView,
+  PasswordResetConfirmView,
+  PasswordResetView,
+)
+from django.shortcuts import redirect, render
+from django.views.generic import CreateView
 
 from .models import *
+
+from django.views.generic import CreateView
+
+from .models import *
+
 
 def index(request):
 

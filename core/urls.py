@@ -15,13 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from rest_framework.authtoken.views import obtain_auth_token # <-- NEW
+from drf_spectacular.views import (SpectacularAPIView, SpectacularRedocView,
+                                   SpectacularSwaggerView)
+from rest_framework import permissions
+from rest_framework.authtoken.views import obtain_auth_token  # <-- NEW
 
 urlpatterns = [
-    path('', include('home.urls')),
+    path('home/', include('home.urls')),
+    path('app/', include('app.urls')),
     path("admin/", admin.site.urls),
     path("", include('admin_datta.urls')),
-    path('', include('django_dyn_dt.urls')), # <-- NEW: Dynamic_DT Routing   
+    path('', include('django_dyn_dt.urls')), # <-- NEW: Dynamic_DT Routing
+    path('api/', include('app.urls')),
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+
 ]
 
 # Lazy-load on routing is needed
