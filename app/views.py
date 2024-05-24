@@ -6,7 +6,9 @@ from python_dhl.resources import address, shipment
 from python_dhl.service import DHLService
 from rest_framework import viewsets
 from rest_framework.decorators import action
+from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import status
 
 from .models import Shipment
 from .serializers import ShipmentSerializer
@@ -16,16 +18,41 @@ api_key = os.getenv('DHL_API_KEY')
 api_secret = os.getenv('DHL_API_SECRET')
 account = os.getenv('DHL_ACCOUNT')
 
-print(api_key, api_secret, 'test')
-print(309049009)
-
 # Initialize DHL API client
 dhl_service = DHLService(
-    api_key='DHL_API_KEY',
-    api_secret='DHL_API_SECRET',
-    account_number='309049009',
+    api_key=api_key,
+    api_secret=api_secret,
+    account_number=account,
     test_mode=True
 )
+
+class GetRatesView(APIView):
+    def get(self, request):
+        try:
+            query_params = request.query_params
+            params = {
+                'accountNumber': account,
+                'originCountryCode': query_params.get('originCountryCode'),
+                'originCityName': query_params.get('originCityName'),
+                'destinationCountryCode': query_params.get('destinationCountryCode'),
+                'destinationCityName': query_params.get('destinationCityName'),
+                'weight': query_params.get('weight'),
+                'length': query_params.get('length'),
+                'width': query_params.get('width'),
+                'height': query_params.get('height'),
+                'plannedShippingDate': query_params.get('plannedShippingDate'),
+                'isCustomsDeclarable': query_params.get('isCustomsDeclarable'),
+                'unitOfMeasurement': query_params.get('unitOfMeasurement')
+            }
+
+            rates_response = dhl_service.get_rates(**params)
+
+            if rates_response.success:
+                return Response(rates_response.products, status=status.HTTP_200_OK)
+            else:
+                return Response({"error": rates_response.error_title}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
 class ShipmentViewSet(viewsets.ModelViewSet):
     queryset = Shipment.objects.all()
@@ -122,17 +149,6 @@ class ShipmentViewSet(viewsets.ModelViewSet):
             return Response({'error': str(e)}, status=400)
 
     @action(detail=False, methods=['get'])
-    def get_rates(self, request):
-        origin = request.query_params.get('origin')
-        destination = request.query_params.get('destination')
-        weight = request.query_params.get('weight')
-        try:
-            rates = dhl_service.get_rates(origin=origin, destination=destination, weight=weight)
-            return Response(rates)
-        except Exception as e:
-            return Response({'error': str(e)}, status=400)
-
-    @action(detail=False, methods=['get'])
     def track_shipment(self, request):
         tracking_number = request.query_params.get('tracking_number')
         try:
@@ -140,4 +156,3 @@ class ShipmentViewSet(viewsets.ModelViewSet):
             return Response(tracking_info)
         except Exception as e:
             return Response({'error': str(e)}, status=400)
-

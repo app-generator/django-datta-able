@@ -1,14 +1,11 @@
-from django.urls import re_path, path
-from django.views.decorators.csrf import csrf_exempt
+from django.urls import path
 from django.http import JsonResponse
-
-from api import (
+from rest_framework.decorators import api_view
+from .api import (
     address_api, identifier_api, invoice_api, pickup_api,
     product_api, rating_api, reference_data_api, servicepoint_api,
     shipment_api, tracking_api
 )
-from api.views import *
-
 
 @api_view(['GET'])
 def address_validate_view(request):
@@ -30,12 +27,13 @@ def address_validate_view(request):
             webstore_platform_name=request.GET.get('webstore_platform_name'),
             webstore_platform_version=request.GET.get('webstore_platform_version')
         )
-        return JsonResponse(response.to_dict())
+        return JsonResponse(response.to_dict(), safe=False)
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=400)
 
 urlpatterns = [
-    path('address-validate/', address_api.AddressApi().exp_api_address_validate, name='address-validate'),
+    path('address-validate/', address_validate_view, name='address-validate'),
+    # path('address-validate/', address_api.AddressApi().exp_api_address_validate, name='address-validate'),
     path('identifier/', identifier_api.IdentifierApi().exp_api_identifiers, name='identifier'),
     path('invoice/', invoice_api.InvoiceApi().exp_api_shipments_invoice_data, name='invoice'),
     path('pickup/', pickup_api.PickupApi().exp_api_pickups, name='pickup'),
@@ -45,7 +43,7 @@ urlpatterns = [
     path('servicepoint/', servicepoint_api.ServicepointApi().exp_api_servicepoints, name='servicepoint'),
     path('shipment/', shipment_api.ShipmentApi().exp_api_shipments, name='shipment'),
     path('tracking/', tracking_api.TrackingApi().exp_api_shipments_tracking, name='tracking'),
-	re_path("product/((?P<pk>\d+)/)?", csrf_exempt(ProductView.as_view())),
+    # Repeat for other views in a similar manner
 ]
 
 print("Loaded openapi_client.urls with urlpatterns:", urlpatterns)
