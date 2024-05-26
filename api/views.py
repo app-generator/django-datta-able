@@ -4,17 +4,22 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from django.http import JsonResponse
 
 
 from api.serializers import *
+from api import (
+    address_api, identifier_api, invoice_api, pickup_api,
+    product_api, rating_api, reference_data_api, servicepoint_api,
+    shipment_api, tracking_api
+)
 
+# try:
 
-try:
+#     from home.models import Product
 
-    from home.models import Product
-
-except:
-    pass
+# except:
+#     pass
 
 class ProductView(APIView):
 
@@ -85,3 +90,27 @@ class ProductView(APIView):
             'success': True
         }, status=HTTPStatus.OK)
 
+
+@api_view(['GET'])
+def address_validate_view(request):
+    api_instance = address_api.AddressApi()
+    try:
+        response = api_instance.exp_api_address_validate(
+            type=request.GET.get('type'),  # Corrected: 'type' is the parameter name
+            country_code=request.GET.get('country_code'),  # Corrected: 'country_code' is the parameter name
+            postal_code=request.GET.get('postal_code'),
+            city_name=request.GET.get('city_name'),
+            county_name=request.GET.get('county_name'),
+            strict_validation=request.GET.get('strict_validation'),
+            message_reference=request.GET.get('message_reference'),
+            message_reference_date=request.GET.get('message_reference_date'),
+            plugin_name=request.GET.get('plugin_name'),
+            plugin_version=request.GET.get('plugin_version'),
+            shipping_system_platform_name=request.GET.get('shipping_system_platform_name'),
+            shipping_system_platform_version=request.GET.get('shipping_system_platform_version'),
+            webstore_platform_name=request.GET.get('webstore_platform_name'),
+            webstore_platform_version=request.GET.get('webstore_platform_version')
+        )
+        return JsonResponse(response.to_dict(), safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=400)

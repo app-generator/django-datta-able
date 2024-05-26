@@ -3,17 +3,11 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import requests
-from python_dhl.resources.helper import MeasurementUnit
-from python_dhl.resources.response import (
-    DHLPickupResponse,
-    DHLRatesResponse,
-    DHLResponse,
-    DHLShipmentResponse,
-    DHLTrackingResponse,
-    DHLUploadResponse,
-    DHLValidateAddressResponse,
-)
 from requests.auth import HTTPBasicAuth
+
+from python_dhl.resources.helper import MeasurementUnit
+from python_dhl.resources.response import DHLShipmentResponse, DHLPickupResponse, DHLResponse, DHLUploadResponse, \
+    DHLTrackingResponse, DHLRatesResponse, DHLValidateAddressResponse
 
 logger = logging.getLogger(__name__)
 

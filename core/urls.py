@@ -25,7 +25,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('admin_datta.urls')),
     path('', include('django_dyn_dt.urls')),
-    path('api/', include('app.urls')),
+    # path('api/', include('app.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
@@ -35,6 +35,7 @@ urlpatterns = [
 # Lazy-load on routing is needed
 # During the first build, API is not yet generated
 try:
+    # urlpatterns.append(path("dhl-api/", include("openapi_client.urls")))
     urlpatterns.append(path("api/", include("api.urls")))
     urlpatterns.append(path("login/jwt/", view=obtain_auth_token))
 except:

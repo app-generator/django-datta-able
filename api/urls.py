@@ -9,31 +9,6 @@ from api import (
 )
 from api.views import *
 
-
-@api_view(['GET'])
-def address_validate_view(request):
-    api_instance = address_api.AddressApi()
-    try:
-        response = api_instance.exp_api_address_validate(
-            type=request.GET.get('type'),
-            country_code=request.GET.get('country_code'),
-            postal_code=request.GET.get('postal_code'),
-            city_name=request.GET.get('city_name'),
-            county_name=request.GET.get('county_name'),
-            strict_validation=request.GET.get('strict_validation'),
-            message_reference=request.GET.get('message_reference'),
-            message_reference_date=request.GET.get('message_reference_date'),
-            plugin_name=request.GET.get('plugin_name'),
-            plugin_version=request.GET.get('plugin_version'),
-            shipping_system_platform_name=request.GET.get('shipping_system_platform_name'),
-            shipping_system_platform_version=request.GET.get('shipping_system_platform_version'),
-            webstore_platform_name=request.GET.get('webstore_platform_name'),
-            webstore_platform_version=request.GET.get('webstore_platform_version')
-        )
-        return JsonResponse(response.to_dict())
-    except Exception as e:
-        return JsonResponse({'error': str(e)}, status=400)
-
 urlpatterns = [
     path('address-validate/', address_api.AddressApi().exp_api_address_validate, name='address-validate'),
     path('identifier/', identifier_api.IdentifierApi().exp_api_identifiers, name='identifier'),
@@ -48,4 +23,4 @@ urlpatterns = [
 	re_path("product/((?P<pk>\d+)/)?", csrf_exempt(ProductView.as_view())),
 ]
 
-print("Loaded openapi_client.urls with urlpatterns:", urlpatterns)
+# print("Loaded openapi_client.urls with urlpatterns:", urlpatterns)
