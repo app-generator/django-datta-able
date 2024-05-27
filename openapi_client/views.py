@@ -81,45 +81,45 @@ def invoice_view(request):
 
 
 
-@api_view(['GET'])
-def ratings_view(request):
-    url = "https://api-mock.dhl.com/mydhlapi/rates"
-    headers = {
-        'Message-Reference': request.GET.get('message_reference', 'SOME_STRING_VALUE'),
-        'Message-Reference-Date': request.GET.get('message_reference_date', 'SOME_STRING_VALUE'),
-        'Plugin-Name': request.GET.get('plugin_name', 'SOME_STRING_VALUE'),
-        'Plugin-Version': request.GET.get('plugin_version', 'SOME_STRING_VALUE'),
-        'Shipping-System-Platform-Name': request.GET.get('shipping_system_platform_name', 'SOME_STRING_VALUE'),
-        'Shipping-System-Platform-Version': request.GET.get('shipping_system_platform_version', 'SOME_STRING_VALUE'),
-        'Webstore-Platform-Name': request.GET.get('webstore_platform_name', 'SOME_STRING_VALUE'),
-        'Webstore-Platform-Version': request.GET.get('webstore_platform_version', 'SOME_STRING_VALUE'),
-        'Authorization': 'Basic REPLACE_BASIC_AUTH'
-    }
-    params = {
-        'accountNumber': request.GET.get('accountNumber', '123456789'),
-        'originCountryCode': request.GET.get('originCountryCode', 'CZ'),
-        'originCityName': request.GET.get('originCityName', 'Prague'),
-        'destinationCountryCode': request.GET.get('destinationCountryCode', 'CZ'),
-        'destinationCityName': request.GET.get('destinationCityName', 'Prague'),
-        'weight': request.GET.get('weight', '5'),
-        'length': request.GET.get('length', '15'),
-        'width': request.GET.get('width', '10'),
-        'height': request.GET.get('height', '5'),
-        'plannedShippingDate': request.GET.get('plannedShippingDate', '2020-02-26'),
-        'isCustomsDeclarable': request.GET.get('isCustomsDeclarable', 'false').lower() == 'true',
-        'unitOfMeasurement': request.GET.get('unitOfMeasurement', 'metric'),
-        'nextBusinessDay': request.GET.get('nextBusinessDay', 'false').lower() == 'true',
-        'strictValidation': request.GET.get('strictValidation', 'false').lower() == 'true',
-        'getAllValueAddedServices': request.GET.get('getAllValueAddedServices', 'false').lower() == 'true',
-        'requestEstimatedDeliveryDate': request.GET.get('requestEstimatedDeliveryDate', 'true').lower() == 'true',
-        'estimatedDeliveryDateType': request.GET.get('estimatedDeliveryDateType', 'QDDF')
-    }
+# @api_view(['GET'])
+# def ratings_view(request):
+#     url = "https://api-mock.dhl.com/mydhlapi/rates"
+#     headers = {
+#         'Message-Reference': request.GET.get('message_reference', 'SOME_STRING_VALUE'),
+#         'Message-Reference-Date': request.GET.get('message_reference_date', 'SOME_STRING_VALUE'),
+#         'Plugin-Name': request.GET.get('plugin_name', 'SOME_STRING_VALUE'),
+#         'Plugin-Version': request.GET.get('plugin_version', 'SOME_STRING_VALUE'),
+#         'Shipping-System-Platform-Name': request.GET.get('shipping_system_platform_name', 'SOME_STRING_VALUE'),
+#         'Shipping-System-Platform-Version': request.GET.get('shipping_system_platform_version', 'SOME_STRING_VALUE'),
+#         'Webstore-Platform-Name': request.GET.get('webstore_platform_name', 'SOME_STRING_VALUE'),
+#         'Webstore-Platform-Version': request.GET.get('webstore_platform_version', 'SOME_STRING_VALUE'),
+#         'Authorization': 'Basic REPLACE_BASIC_AUTH'
+#     }
+#     params = {
+#         'accountNumber': request.GET.get('accountNumber', '123456789'),
+#         'originCountryCode': request.GET.get('originCountryCode', 'CZ'),
+#         'originCityName': request.GET.get('originCityName', 'Prague'),
+#         'destinationCountryCode': request.GET.get('destinationCountryCode', 'CZ'),
+#         'destinationCityName': request.GET.get('destinationCityName', 'Prague'),
+#         'weight': request.GET.get('weight', '5'),
+#         'length': request.GET.get('length', '15'),
+#         'width': request.GET.get('width', '10'),
+#         'height': request.GET.get('height', '5'),
+#         'plannedShippingDate': request.GET.get('plannedShippingDate', '2020-02-26'),
+#         'isCustomsDeclarable': request.GET.get('isCustomsDeclarable', 'false').lower() == 'true',
+#         'unitOfMeasurement': request.GET.get('unitOfMeasurement', 'metric'),
+#         'nextBusinessDay': request.GET.get('nextBusinessDay', 'false').lower() == 'true',
+#         'strictValidation': request.GET.get('strictValidation', 'false').lower() == 'true',
+#         'getAllValueAddedServices': request.GET.get('getAllValueAddedServices', 'false').lower() == 'true',
+#         'requestEstimatedDeliveryDate': request.GET.get('requestEstimatedDeliveryDate', 'true').lower() == 'true',
+#         'estimatedDeliveryDateType': request.GET.get('estimatedDeliveryDateType', 'QDDF')
+#     }
 
-    response = requests.get(url, headers=headers, params=params, verify=False)
+#     response = requests.get(url, headers=headers, params=params, verify=False)
 
-    if response.status_code == 200:
-        return JsonResponse(response.json(), safe=False)
-    else:
-        return JsonResponse({'error': response.text}, status=response.status_code)
+#     if response.status_code == 200:
+#         return JsonResponse(response.json(), safe=False)
+#     else:
+#         return JsonResponse({'error': response.text}, status=response.status_code)
 
 
