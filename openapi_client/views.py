@@ -7,8 +7,10 @@ import requests
 
 from django.shortcuts import render
 from django.http import JsonResponse
-
+from django.shortcuts import redirect, render
 from rest_framework.decorators import api_view
+
+# from app.forms import ShipmentForm
 
 from .api import (
     address_api, identifier_api, invoice_api, pickup_api,
@@ -66,6 +68,11 @@ def address_validate_view_EXAMPLE(request):
         'result': result
     }
     return render(request, 'address_validate.html', context)
+
+
+@api_view(['GET'])
+def test_endpoint(request):
+    return JsonResponse({'message': 'Hello, World!'})
 
 
 @api_view(['GET'])

@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(247, 247, 247);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto;
+}
+
+tr:hover {
+    background-color: rgb(230, 229, 229);
+}
+
+.item {
+    margin-bottom: 40px;
+}
+
+div.datatable-top::after {
+    display: none; !important;
+}
+
+#search-container {
+    width: 10%;
+}
+
+img {
+    height: 40px;
+}
+
+img:hover {
+    cursor: pointer;
+}

@@ -26,6 +26,19 @@ DHL_API_KEY = os.getenv('DHL_API_KEY')
 DHL_API_SECRET = os.getenv('DHL_API_SECRET')
 DHL_ACCOUNT = os.getenv('DHL_ACCOUNT')
 
+DHL_API_URL = 'https://api-mock.dhl.com/mydhlapi/rates'
+DHL_API_HEADERS = {
+    'Message-Reference': 'SOME_STRING_VALUE',
+    'Message-Reference-Date': 'SOME_STRING_VALUE',
+    'Plugin-Name': 'SOME_STRING_VALUE',
+    'Plugin-Version': 'SOME_STRING_VALUE',
+    'Shipping-System-Platform-Name': 'SOME_STRING_VALUE',
+    'Shipping-System-Platform-Version': 'SOME_STRING_VALUE',
+    'Webstore-Platform-Name': 'SOME_STRING_VALUE',
+    'Webstore-Platform-Version': 'SOME_STRING_VALUE',
+    'Authorization': DHL_API_KEY,
+}
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

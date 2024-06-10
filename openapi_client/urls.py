@@ -9,6 +9,7 @@ urlpatterns = [
     # path('pickup/', views.pickup_view, name='pickup'),
     # path('product/', views.product_view, name='product'),
     # path('rating/', views.ratings_view, name='rating'),
+    # path('rating/', views.ratings_view, name='rating'),
     # path('reference_data/', views.reference_data_view, name='reference-data'),
     # path('servicepoint/', views.servicepoint_view, name='servicepoint'),
     # path('shipment/', views.shipment_view, name='shipment'),
