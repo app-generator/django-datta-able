@@ -123,7 +123,39 @@ class ApiClient:
         :return: The ApiClient object.
         """
         if cls._default is None:
-            cls._default = ApiClient()
+            """
+                1. This method - ApiClient.get_default() - is used in all other Api classes.
+            Check __init__ methods of address_api.AddressApi, identifier_api.IdentifierApi, etc.
+            When initializing any of those (AddressApi, IdentifierApi, etc.) you can pass an instance
+            of ApiClient, and if you do not, then this method is called which returns a default instance
+            of ApiClient.
+                
+                2. IF we will always use the same API_KEY and API_SECRET that is read from .env
+            then we do not need to pass an instance to any of those instances when we initialize them,
+            rather we will configure this method so default ApiClient instance passed will always
+            use the USERNAME (API_KEY) and PASSWORD (API_SECRET) from the .env
+                
+                3. ApiClient.configuration is an instance of Configuration class which holds
+            the values for USERNAME and PASSWORD (API_KEY and API_SECRET) and is responsible
+            for getting the access token using Configuration.get_basic_auth_token(). IF we do not pass
+            an instance of Configuration when we initialize this object (ApiClient) then it uses a default
+            Configuration instance. We can change that (Configuration.get_default()), or basically do it
+            here.
+            """
+
+            # When I (omer) was testing with the API key and secret provided, it did not have access to some
+            # of the endpoints (like address-validate). For testing I used the authentication token that I took
+            # from the request headers on DHL-API's website. If you set below line to True, it will ignore
+            # USERNAME and PASSWORD read from .env and use that default token.
+            # Set it to False if you want to use the auth token retrieved using API key and secret.
+            use_default_authentication_token = True
+
+            default_configuration = Configuration(
+                username=os.environ.get('USERNAME'),
+                password=os.environ.get('PASSWORD'),
+                use_default_authentication_token=use_default_authentication_token
+            )
+            cls._default = ApiClient(configuration=default_configuration)
         return cls._default
 
     @classmethod

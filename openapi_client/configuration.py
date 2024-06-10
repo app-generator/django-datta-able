@@ -95,14 +95,29 @@ conf = openapi_client.Configuration(
 
     _default = None
 
-    def __init__(self, host=None,
-                 api_key=None, api_key_prefix=None,
-                 username=None, password=None,
-                 access_token=None,
-                 server_index=None, server_variables=None,
-                 server_operation_index=None, server_operation_variables=None,
-                 ssl_ca_cert=None,
-                 ) -> None:
+    def __init__(
+        self,
+        host=None,
+        api_key=None,
+        api_key_prefix=None,
+        username=None,
+        password=None,
+        access_token=None,
+        server_index=None,
+        server_variables=None,
+        server_operation_index=None,
+        server_operation_variables=None,
+        ssl_ca_cert=None,
+        use_default_authentication_token:bool=False
+    ) -> None:
+        """
+        if user_default_authentication is set to True, then get_basic_auth_token() method
+        returns the authentication string that is used on DHL-API's website.
+
+        Otherwise it will use the USERNAME (API_KEY) and PASSWORD (API_SECRET) read from the .env
+        """
+        self.use_default_authentication_token = use_default_authentication_token
+
         """Constructor
         """
         self._base_path = "https://express.api.dhl.com/mydhlapi/test " if host is None else host
@@ -379,15 +394,24 @@ conf = openapi_client.Configuration(
 
         :return: The token for basic HTTP authentication.
         """
-        username = ""
-        if self.username is not None:
-            username = self.username
-        password = ""
-        if self.password is not None:
-            password = self.password
-        return urllib3.util.make_headers(
-            basic_auth=username + ':' + password
-        ).get('authorization')
+
+        if self.use_default_authentication_token:
+            # This will ignore the username and password (API key and secret)
+            # and use the token taken from DHL-API's website.
+            return 'Basic ZGVtby1rZXk6ZGVtby1zZWNyZXQ='
+        else:
+            # Use username and password (API key and secret) to retrieve the
+            # authentication token that will be used in the request header
+            # of all api calls to dhl-api.
+            username = ""
+            if self.username is not None:
+                username = self.username
+            password = ""
+            if self.password is not None:
+                password = self.password
+            return urllib3.util.make_headers(
+                basic_auth=username + ':' + password
+            ).get('authorization')
 
     def auth_settings(self):
         """Gets Auth Settings dict for api client.

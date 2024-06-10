@@ -1,6 +1,13 @@
 # api/views.py
+import os
+import ssl
+import json
+import urllib3
+import requests
 
+from django.shortcuts import render
 from django.http import JsonResponse
+
 from rest_framework.decorators import api_view
 
 from .api import (
@@ -8,12 +15,57 @@ from .api import (
     product_api, rating_api, reference_data_api, servicepoint_api,
     shipment_api, tracking_api
 )
-import urllib3
-import ssl
-import requests
+
+from openapi_client import Configuration
+from openapi_client import ApiClient
+
+from openapi_client.forms import AddressValidateForm
+
 
 # Disable warnings for SSL verification (for development purposes only)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+
+def address_validate_view_EXAMPLE(request):
+    # Example with django templates
+    if request.method == 'POST':
+        form = AddressValidateForm(request.POST)
+
+        if form.is_valid():
+            api_instance = address_api.AddressApi()
+
+            response = api_instance.exp_api_address_validate(
+                type=form.cleaned_data.get('type_'),
+                country_code=form.cleaned_data.get('country_code'),
+                postal_code=form.cleaned_data.get('postal_code'),
+                city_name=form.cleaned_data.get('city_name'),
+                county_name=form.cleaned_data.get('county_name'),
+                strict_validation=form.cleaned_data.get('strict_validation'),
+                message_reference=form.cleaned_data.get('message_reference'),
+                message_reference_date=form.cleaned_data.get('message_reference_date'),
+                plugin_name=form.cleaned_data.get('plugin_name'),
+                plugin_version=form.cleaned_data.get('plugin_version'),
+                shipping_system_platform_name=form.cleaned_data.get('shipping_system_platform_name'),
+                shipping_system_platform_version=form.cleaned_data.get('shipping_system_platform_version'),
+                webstore_platform_name=form.cleaned_data.get('webstore_platform_name'),
+                webstore_platform_version=form.cleaned_data.get('webstore_platform_version'),
+            )
+
+            # You can do whatever you want with the response. I'll just pass it to the template
+            # and display it for this example
+            result = json.dumps(response.to_dict())
+        else:
+            result = None
+
+    else:
+        form = AddressValidateForm
+        result = None
+
+    context = {
+        'form': form,
+        'result': result
+    }
+    return render(request, 'address_validate.html', context)
 
 
 @api_view(['GET'])
@@ -22,19 +74,19 @@ def address_validate_view(request):
     try:
         response = api_instance.exp_api_address_validate(
             type=request.GET.get('type'),
-            country_code=request.GET.get('CZ'),
-            postal_code=request.GET.get('14800'),
-            city_name=request.GET.get('Prague'),
-            county_name=request.GET.get('praha'),
-            strict_validation=request.GET.get('TRUE'),
-            message_reference=request.GET.get('d0e7832e-5c98-11ea-bc55-0242ac13'),
-            message_reference_date=request.GET.get('Wed, 21 Oct 2015 07:28:00 GMT'),
-            plugin_name=request.GET.get(''),
-            plugin_version=request.GET.get(''),
-            shipping_system_platform_name=request.GET.get(''),
-            shipping_system_platform_version=request.GET.get(''),
-            webstore_platform_name=request.GET.get(''),
-            webstore_platform_version=request.GET.get('')
+            country_code=request.GET.get('countryCode'),
+            postal_code=request.GET.get('postalCode'),
+            city_name=request.GET.get('cityName'),
+            county_name=request.GET.get('countyName'),
+            strict_validation=request.GET.get('strictValidation'),
+            message_reference=request.GET.get('messageReference'),
+            message_reference_date=request.GET.get('messageReferenceDate'),
+            plugin_name=request.GET.get('pluginName'),
+            plugin_version=request.GET.get('pluginVersion'),
+            shipping_system_platform_name=request.GET.get('shippingSystemPlatformName'),
+            shipping_system_platform_version=request.GET.get('shippingSystemPlatformVersion'),
+            webstore_platform_name=request.GET.get('webstorePlatformName'),
+            webstore_platform_version=request.GET.get('webstorePlatformVersion')
         )
         return JsonResponse(response.to_dict())
     except Exception as e:
