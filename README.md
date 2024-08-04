@@ -32,6 +32,25 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** 
 
 <br /> 
 
+## Django Framework
+
+Django is a high-level Python web framework designed for rapid development of secure and maintainable websites. Here are the core features:
+
+- Model-View-Template (MVT) architecture:
+  - Models define your data structure
+  - Views handle the logic and processing
+  - Templates manage the presentation
+- Built-in admin interface for easy content management
+- Object-Relational Mapping (ORM) for database interactions without writing SQL
+- URL routing system to map URLs to views
+- Form handling and validation
+- Built-in security features (e.g., protection against SQL injection, cross-site scripting)
+- Scalable and suitable for both small and large projects
+
+To get started, you'll need Python installed. Then you can install Django, create a project, define models, set up views and templates, and run your development server.
+
+<br />
+
 ## Start with `Docker`
 
 > 👉 **Step 1** - Download the code from the GH repository (using `GIT`) 
