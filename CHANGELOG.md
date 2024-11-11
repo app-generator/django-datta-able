@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.37] 2024-11-11
+### Changes
+
+- Update RM Links:
+  - 👉 [Django Datta Able](https://app-generator.dev/docs/products/django/datta-able/index.html) - **Complete Documentation**
+  - 👉 [Django Datta Able](https://app-generator.dev/product/datta-able/django/) - Product Page 
+  - 👉 [Get Support](https://app-generator.dev/ticket/create/) via Email and Discord
+
 ## [1.0.36] 2024-09-17
 ### Changes
 
