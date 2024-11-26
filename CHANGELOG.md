@@ -1,5 +1,19 @@
 # Change Log
 
+## [1.0.38] 2024-11-26
+### Changes
+
+> Update RM Links
+
+- 👉 [Django Datta Able](https://app-generator.dev/product/datta-able/django/) - `Product Page`
+- 👉 [Django Datta Able Documentation](https://app-generator.dev/docs/products/django/datta-able/index.html) - `Complete Information` and Support Links
+  - [Getting Started with Django](https://app-generator.dev/docs/technologies/django/index.html) - a `comprehensive tutorial`
+  - `Configuration`: Install Tailwind/Flowbite, Prepare Environment, Setting up the Database 
+  - `Start with Docker`
+  - `Manual Build`
+  - `Start the project`
+  - `Deploy on Render`
+
 ## [1.0.37] 2024-11-11
 ### Changes
 
