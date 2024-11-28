@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.39] 2024-11-28
+### Changes
+
+- Bump UI Version
+  - Datta Able, Bootstrap 5 Version
+
 ## [1.0.38] 2024-11-26
 ### Changes
 

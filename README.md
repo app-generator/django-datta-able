@@ -18,24 +18,24 @@ The product is designed to deliver the best possible user experience with highly
 
 ## Features
 
-- **Django 4.1.12**
-- Best Practices
-- API Generator
-- DataTables
-- [Datta Able Dashboard](https://app-generator.dev/docs/templates/bootstrap/datta-able.html) - Full Integration 
-- `CI/CD` Flow via Render 
-- `Docker`
+- Simple, Easy-to-Extend Codebase
+- Soft Dashboard Design - Full Integration 
+- Bootstrap 5 Styling 
+- Session-based Authentication, Password recovery
+- DB Persistence: SQLite (default), can be used with MySql, PgSql
+- Docker 
+- CI/CD integration for Render 
 
 ![Django Datta Able - Open-Source Django Starter](https://user-images.githubusercontent.com/51070104/176118649-7233ffbc-6118-4f56-8cda-baa81d256877.png)
 
 <br />
 
-## [Datta Able PRO Version](https://app-generator.dev/product/soft-ui-dashboard-pro/django/)
+## [Datta Able PRO Version](https://app-generator.dev/product/datta-able-pro/django/)
 
-> The premium version provides more features, priority on support, and is more often updated - [Live Demo](https://django-soft-dash-pro.onrender.com/).
+> The premium version provides more features, priority on support, and is more often updated - [Live Demo](https://django-datta-pro.onrender.com/).
 
 - **Simple, Easy-to-Extend** Codebase
-- **Soft UI Design** Design - PRO Version
+- **Datta Able Design** - PRO Version
 - Bootstrap 5 CSS
 - **OAuth** - Github
 - **Extended User Profile**

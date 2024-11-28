@@ -4,7 +4,7 @@ python-dotenv==1.0.1
 str2bool==1.1
 
 # UI 
-django-admin-datta==1.0.11
+django-admin-datta==1.0.15
 
 # Tooling
 django-dynamic-datatb==1.0.25
