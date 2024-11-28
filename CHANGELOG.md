@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.40] 2024-11-28
+### Changes
+
+- Update DEMO Link
+  - [Django Datta Able](https://django-datta.onrender.com) - `LIVE Demo` 
+
 ## [1.0.39] 2024-11-28
 ### Changes
 

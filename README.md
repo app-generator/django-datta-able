@@ -5,7 +5,7 @@ Open-source **Django** project crafted on top of **Datta Able Dashboard**, an op
 The product is designed to deliver the best possible user experience with highly customizable feature-rich pages. 
 
 - 👉 [Django Datta Able](https://app-generator.dev/product/datta-able/django/) - `Product Page`
-- 👉 [Django Datta Able](https://django-datta-able.appseed-srv1.com) - `LIVE Demo` 
+- 👉 [Django Datta Able](https://django-datta.onrender.com) - `LIVE Demo` 
 - 👉 [Django Datta Able Documentation](https://app-generator.dev/docs/products/django/datta-able/index.html) - `Complete Information` and Support Links
   - [Getting Started with Django](https://app-generator.dev/docs/technologies/django/index.html) - a `comprehensive tutorial`
   - `Configuration`: Install Tailwind/Flowbite, Prepare Environment, Setting up the Database 
