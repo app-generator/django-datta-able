@@ -1,5 +1,22 @@
 # Change Log
 
+## [1.0.42] 2024-12-15
+### Changes
+
+> Mention [Django App Generator](https://app-generator.dev/tools/django-generator/) Service:
+
+- Access the [App Generator](https://app-generator.dev/tools/django-generator/) page
+- Select the preferred design
+- (Optional) Design Database: edit models and fields
+- (Optional) Edit the fields for the extended user model
+- (Optional) Enable OAuth for GitHub
+- (Optional) Add Celery (async tasks)
+- (Optional) Enable Dynamic API Module
+- Docker Scripts
+- Render CI/Cd Scripts
+
+**The generated Django project is available as a ZIP Archive and also uploaded to GitHub.**
+
 ## [1.0.41] 2024-11-28
 ### Changes
 
