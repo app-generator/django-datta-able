@@ -15,7 +15,7 @@ The product is designed to deliver the best possible user experience with highly
 
 <br />
 
-## Add Features with [Django App Generator](https://app-generator.dev/tools/django-generator/)
+### Customize with [Django App Generator - Datta Design](https://app-generator.dev/tools/django-generator/datta/)
 
 - Access the [App Generator](https://app-generator.dev/tools/django-generator/) page
 - Select Datta Able as the preferred design
