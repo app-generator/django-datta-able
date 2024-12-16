@@ -18,7 +18,7 @@ The product is designed to deliver the best possible user experience with highly
 ### Customize with [Django App Generator - Datta Design](https://app-generator.dev/tools/django-generator/datta/)
 
 - Access the [App Generator](https://app-generator.dev/tools/django-generator/) page
-- Select Datta Able as the preferred design
+- Select **Datta Able** as the preferred design
 - (Optional) Design Database: edit models and fields
 - (Optional) Edit the fields for the extended user model
 - (Optional) Enable OAuth for GitHub
