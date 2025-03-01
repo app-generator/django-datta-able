@@ -6,15 +6,22 @@ str2bool==1.1
 # UI 
 django-admin-datta==1.0.15
 
-# Tooling
-django-dynamic-datatb==1.0.25
-django-api-generator==1.0.17
+# Tools
 django-debug-toolbar==4.4.6
+djangorestframework==3.15.2
+requests==2.32.3
+pandas==2.2.3
+graphviz==0.20.3
+astor==0.8.1 
+
+# AI
+anthropic==0.34.2
 
 # Deployment
 whitenoise==6.7.0
 gunicorn==23.0.0
 
-# DB Layer
-# psycopg2-binary
-# mysqlclient
+# DB
+#psycopg2-binary==2.9.9
+#mysqlclient==2.1.1
+django-dbbackup==4.2.1

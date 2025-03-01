@@ -1,0 +1,22 @@
+{% load get_attribute %}
+
+<div class="dt-responsive table-responsive">
+    <table class="table">
+        <thead>
+          <tr>
+            {% for field in db_field_names %}
+                <th id="th_{{ field }}_export" scope="col">{{ field }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                {% for field_name in db_field_names %}
+                    <td class="td_{{ field_name }}">{{ item|getattribute:field_name }}</td>
+                {% endfor %}
+            </tr>
+             {% endfor %}
+        </tbody>
+    </table>
+</div>

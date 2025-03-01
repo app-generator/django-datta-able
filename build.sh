@@ -4,6 +4,9 @@ set -o errexit
 
 python -m pip install --upgrade pip
 
+# UI 
+yarn ; yarn build
+
 pip install -r requirements.txt
 
 python manage.py collectstatic --no-input

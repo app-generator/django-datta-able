@@ -4,8 +4,6 @@ from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordRes
 from django.views.generic import CreateView
 from django.contrib.auth import logout
 
-from django.contrib.auth.decorators import login_required
-
 from .models import *
 
 def index(request):
@@ -15,9 +13,3 @@ def index(request):
     #'products' : Product.objects.all()
   }
   return render(request, "pages/index.html", context)
-
-def tables(request):
-  context = {
-    'segment': 'tables'
-  }
-  return render(request, "pages/dynamic-tables.html", context)

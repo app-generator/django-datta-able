@@ -14,3 +14,4 @@ env__
 #*.sqlite*
 
 #.env
+yarn.lock

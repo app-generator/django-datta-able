@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.44] 2025-03-01
+### Changes
+
+- Added Dynamic Tables module
+- Added Dynamic API Module  
+- Added CLI Module for different internal tasks
+- Integrate Vite for Assets management
+
 ## [1.0.43] 2024-12-16
 ### Changes
 

@@ -41,11 +41,14 @@ The product is designed to deliver the best possible user experience with highly
 
 - Simple, Easy-to-Extend Codebase
 - Datta Able Design - Full Integration 
+- Dynamic Tables
+- Dynamic API
+- CLI for Coding Tasks
 - Bootstrap 5 Styling 
 - Session-based Authentication, Password recovery
 - DB Persistence: SQLite (default), can be used with MySql, PgSql
-- Docker 
-- CI/CD integration for Render 
+- Docker, CI/CD for Render
+- Vite for assets management 
 
 ![Django Datta Able - Open-Source Django Starter](https://user-images.githubusercontent.com/51070104/176118649-7233ffbc-6118-4f56-8cda-baa81d256877.png)
 

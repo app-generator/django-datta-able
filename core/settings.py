@@ -15,7 +15,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from str2bool import str2bool
 
-import django_dyn_dt
+import dyn_dt
 
 load_dotenv()  # take environment variables from .env.
 
@@ -26,9 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
-if not SECRET_KEY:
-    SECRET_KEY = ''.join(random.choice( string.ascii_lowercase  ) for i in range( 32 ))
+SECRET_KEY = os.environ.get('SECRET_KEY', 'Super_Secr3t_9999')
 
 # Enable/Disable DEBUG Mode
 DEBUG = str2bool(os.environ.get('DEBUG'))
@@ -58,11 +56,13 @@ INSTALLED_APPS = [
 
     "home",
 
-    # Tooling Dynamic_DT
-    'django_dyn_dt',             # <-- NEW: Dynamic_DT
+    # Dynamic DT
+    "dyn_dt",
+
+    # Dynamic API
+    "dyn_api",
 
     # Tooling API-GEN
-    'django_api_gen',            # Django API GENERATOR  # <-- NEW
     'rest_framework',            # Include DRF           # <-- NEW 
     'rest_framework.authtoken',  # Include DRF Auth      # <-- NEW     
 ]
@@ -81,12 +81,11 @@ MIDDLEWARE = [
 ROOT_URLCONF = "core.urls"
 
 HOME_TEMPLATES      = os.path.join(BASE_DIR, 'templates') 
-TEMPLATE_DIR_DATATB = os.path.join(BASE_DIR, "django_dyn_dt/templates") # <-- NEW: Dynamic_DT
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [HOME_TEMPLATES, TEMPLATE_DIR_DATATB],                  # <-- UPD: Dynamic_DT
+        "DIRS": [HOME_TEMPLATES],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -168,11 +167,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-DYN_DB_PKG_ROOT = os.path.dirname( inspect.getfile( django_dyn_dt ) ) # <-- NEW: Dynamic_DT
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(DYN_DB_PKG_ROOT, "templates/static"),                # <-- NEW: Dynamic_DT 
 )
 
 #if not DEBUG:
@@ -193,8 +189,8 @@ DYNAMIC_DATATB = {
 }
 ########################################
 
-# ### API-GENERATOR Settings ###
-API_GENERATOR = {
+# Syntax: URI -> Import_PATH
+DYNAMIC_API = {
     # SLUG -> Import_PATH 
     'product'  : "home.models.Product",
 }

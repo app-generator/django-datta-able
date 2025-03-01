@@ -1,0 +1,56 @@
+{% extends "layouts/base-auth.html" %}
+{% load static %}
+
+{% block title %}Register{% endblock title %}
+
+{% block content %}
+
+  <div class="auth-main">
+    <div class="auth-wrapper v1">
+      <div class="auth-form">
+        <div class="position-relative my-5">
+          <div class="auth-bg">
+            <span class="r"></span>
+            <span class="r s"></span>
+            <span class="r s"></span>
+            <span class="r"></span>
+          </div>
+          <div class="card mb-0">
+            <form method="post" class="card-body">
+              {% csrf_token %}
+              
+              <div class="text-center">
+                <a href="{% url "index" %}">
+                  <div>
+                    <img src="{% static "assets/images/logo-dark.svg" %}" alt="img">
+                  </div>
+                </a>
+              </div>
+              <h4 class="text-center f-w-500 mt-4 mb-3">Sign up</h4>
+              {% for field in form %}
+              <div class="form-group mb-3">
+                {{ field }}
+                <span class="d-block mt-1 text-danger">{{ field.errors }}</span>
+              </div>
+              {% endfor %}
+              <div class="d-flex mt-1 justify-content-between">
+                <div class="form-check">
+                  <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="">
+                  <label class="form-check-label text-muted" for="customCheckc1">I agree to all the Terms & Condition</label>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary shadow px-sm-4">Sign up</button>
+              </div>
+              <div class="d-flex justify-content-between align-items-end mt-4">
+                <h6 class="f-w-500 mb-0">Already have an Account?</h6>
+                <a href="{% url "login" %}" class="link-primary">Login</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,205 @@
+{% load i18n static admin_datta %}
+
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a href="{% url "index" %}" class="b-brand text-primary">
+        <!-- ========   Change your logo from here   ============ -->
+        <img src="{% static 'assets/images/logo-white.svg' %}" class="img-fluid" alt="logo">
+      </a>
+    </div>
+    <div class="navbar-content">
+
+      <ul class="pc-navbar">
+      {% if request.user.is_superuser %}  
+
+        {% admin_get_menu as app_list %}
+        {% if app_list %}
+          <li class="pc-item pc-caption">
+            <label>Admin</label>
+          </li>
+          {% for app in app_list %}
+            {% if app.has_perms and not app.pinned %}
+              <li class="pc-item pc-hasmenu">
+                <a data-bs-toggle="collapse" href="#apps" class="pc-link" aria-controls="apps" role="button" aria-expanded="false">
+                  <span class="pc-micon">
+                    <i data-feather="lock"></i>
+                  </span>
+                  <span class="pc-mtext">{{ app.label|slice:10 }}{% if app.label|length > 10 %}..{% endif %}</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span>
+                </a>
+                {% if app.models %}
+                  <ul class="pc-submenu">
+                    {% for model in app.models %}
+                      {% if model.url %}
+                        <li class="pc-item">
+                          <a class="pc-link" href="{{ model.url }}">
+                            {{ model.label }}
+                          </a>
+                        </li>
+                      {% else %}
+                        <li class="pc-item">{{ model.label }}</li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      
+      <!-- superuser guard -->  
+      {% else %}
+
+        <li class="pc-item pc-caption">
+          <label>Navigation</label>
+        </li>
+        <li class="pc-item">
+          <a href="{% url "index" %}" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="home"></i>
+            </span>
+            <span class="pc-mtext">Dashboard</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="{% url "dynamic_dt" %}" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="settings"></i>
+            </span>
+            <span class="pc-mtext">Dynamic Tables</span>
+          </a>
+        </li>     
+        <li class="pc-item">
+          <a href="{% url "dynamic_api" %}" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="server"></i>
+            </span>
+            <span class="pc-mtext">Dynamic API</span>
+          </a>
+        </li>             
+        <li class="pc-item pc-caption">
+          <label>UI Components</label>
+          <i data-feather="feather"></i>
+        </li>
+        <li class="pc-item">
+          <a href="{% url "color" %}" class="pc-link">
+            <span class="pc-micon"><i data-feather="droplet"></i></span>
+            <span class="pc-mtext">Color</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="{% url "typography" %}" class="pc-link">
+            <span class="pc-micon"><i data-feather="type"></i></span>
+            <span class="pc-mtext">Typography</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="{% url "icon_feather" %}" class="pc-link">
+            <span class="pc-micon"><i data-feather="feather"></i></span>
+            <span class="pc-mtext">Icons</span>
+          </a>
+        </li>
+        <li class="pc-item pc-caption">
+          <label>Pages</label>
+          <i data-feather="monitor"></i>
+        </li> 
+
+        {% if not request.user.is_authenticated %}
+        <li class="pc-item">
+          <a href="{% url "login" %}" class="pc-link">
+            <span class="pc-micon"><i data-feather="lock"></i></span>
+            <span class="pc-mtext">Login</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="{% url "register" %}" class="pc-link">
+            <span class="pc-micon"><i data-feather="user-plus"></i></span>
+            <span class="pc-mtext">Register</span>
+          </a>
+        </li>
+        {% else %}
+        <li class="pc-item">
+          <a href="{% url "logout" %}" class="pc-link">
+            <span class="pc-micon">
+              <svg class="pc-icon me-2">
+                <use xlink:href="#custom-logout-1-outline"></use>
+              </svg>
+            </span>
+            <span class="pc-mtext">Logout</span>
+          </a>
+        </li>
+        {% endif %}
+        <li class="pc-item pc-caption">
+          <label>Other</label>
+          <i data-feather="sidebar"></i>
+        </li>
+        <li class="pc-item pc-hasmenu">
+          <a href="#!" class="pc-link">
+            <span class="pc-micon">
+              <i data-feather="align-right"></i>
+            </span>
+            <span class="pc-mtext">Menu levels</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span>
+          </a>
+          <ul class="pc-submenu">
+            <li class="pc-item"><a class="pc-link" href="#!">Level 2.1</a></li>
+            <li class="pc-item pc-hasmenu">
+              <a href="#!" class="pc-link"
+                >Level 2.2<span class="pc-arrow"><i class="ti ti-chevron-right"></i></span
+              ></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
+                <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a href="#!" class="pc-link"
+                    >Level 3.3<span class="pc-arrow"><i class="ti ti-chevron-right"></i></span
+                  ></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
+                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="#!" class="pc-link"
+                >Level 2.3<span class="pc-arrow"><i class="ti ti-chevron-right"></i></span
+              ></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
+                <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a href="#!" class="pc-link">
+                    Level 3.3
+                    <span class="pc-arrow"><i class="ti ti-chevron-right"></i></span>
+                  </a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
+                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="pc-item">
+          <a href="{% url "sample_page" %}" class="pc-link">
+            <span class="pc-micon"><i data-feather="sidebar"></i></span>
+            <span class="pc-mtext">Sample page</span>
+          </a>
+        </li>
+      
+      {% endif %}  
+      </ul>
+      <div class="card pc-user-card my-3 bg-white bg-opacity-10">
+        <div class="card-body text-center">
+          <a href="https://app-generator.dev/product/datta-able-pro/django/" class="btn btn-warning">
+            <svg class="pc-icon me-2">
+              <use xlink:href="#custom-logout-1-outline"></use>
+            </svg>
+            PRO Version
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
