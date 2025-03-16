@@ -13,45 +13,23 @@
       <ul class="pc-navbar">
       {% if request.user.is_superuser %}  
 
-        {% admin_get_menu as app_list %}
-        {% if app_list %}
-          <li class="pc-item pc-caption">
-            <label>Admin</label>
-          </li>
-          {% for app in app_list %}
-            {% if app.has_perms and not app.pinned %}
-              <li class="pc-item pc-hasmenu">
-                <a data-bs-toggle="collapse" href="#apps" class="pc-link" aria-controls="apps" role="button" aria-expanded="false">
-                  <span class="pc-micon">
-                    <i data-feather="lock"></i>
-                  </span>
-                  <span class="pc-mtext">{{ app.label|slice:10 }}{% if app.label|length > 10 %}..{% endif %}</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span>
-                </a>
-                {% if app.models %}
-                  <ul class="pc-submenu">
-                    {% for model in app.models %}
-                      {% if model.url %}
-                        <li class="pc-item">
-                          <a class="pc-link" href="{{ model.url }}">
-                            {{ model.label }}
-                          </a>
-                        </li>
-                      {% else %}
-                        <li class="pc-item">{{ model.label }}</li>
-                      {% endif %}
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-              </li>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
+      <li class="pc-item pc-caption">
+        <label>ADMIN</label>
+      </li>
+      <li class="pc-item">
+        <a href="{% url "admin:index" %}" class="pc-link">
+          <span class="pc-micon">
+            <i data-feather="settings"></i>
+          </span>
+          <span class="pc-mtext">Superuser UI</span>
+        </a>
+      </li>
       
       <!-- superuser guard -->  
-      {% else %}
+      {% endif %}
 
         <li class="pc-item pc-caption">
-          <label>Navigation</label>
+          <label>Apps</label>
         </li>
         <li class="pc-item">
           <a href="{% url "index" %}" class="pc-link">
@@ -64,7 +42,7 @@
         <li class="pc-item">
           <a href="{% url "dynamic_dt" %}" class="pc-link">
             <span class="pc-micon">
-              <i data-feather="settings"></i>
+              <i data-feather="table"></i>
             </span>
             <span class="pc-mtext">Dynamic Tables</span>
           </a>
@@ -187,19 +165,18 @@
             <span class="pc-mtext">Sample page</span>
           </a>
         </li>
-      
-      {% endif %}  
+
       </ul>
+      
       <div class="card pc-user-card my-3 bg-white bg-opacity-10">
         <div class="card-body text-center">
-          <a href="https://app-generator.dev/product/datta-able-pro/django/" class="btn btn-warning">
-            <svg class="pc-icon me-2">
-              <use xlink:href="#custom-logout-1-outline"></use>
-            </svg>
-            PRO Version
+          <a href="https://app-generator.dev/product/datta-able/django/" class="btn btn-success">
+            <span class="pc-micon"><i data-feather="download"></i></span>
+            Download
           </a>
         </div>
       </div>
+      
     </div>
   </div>
 </nav>

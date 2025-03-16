@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 """
-Copyright (c) AppSeed.us
+Copyright (c) App-Generator.dev | AppSeed.us
 """
 
 import os, subprocess
@@ -14,7 +14,7 @@ DIR_ROOT              = '.' # points to the root
 DIR_TMPL              = os.path.join( DIR_ROOT, 'templates' )
 DIR_STATIC            = os.path.join( DIR_ROOT, 'static'    )
 
-DIR_DJ_CORE           = 'core'
+DIR_DJ_CORE           = 'config'
 DIR_DJ_HOME           = 'home'
 
 FILE_DJ_MANAGE_s      = 'manage.py'

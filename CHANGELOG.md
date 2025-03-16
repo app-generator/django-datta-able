@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.45] 2025-03-16
+### Changes
+
+- Codebase refactoring
+- Bump UI - **Datta Able** v1.0.17
+- Integrate Jazzmin for ADMIN UI
+
 ## [1.0.44] 2025-03-01
 ### Changes
 

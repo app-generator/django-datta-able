@@ -15,8 +15,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 from str2bool import str2bool
 
-import dyn_dt
-
 load_dotenv()  # take environment variables from .env.
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -46,21 +44,23 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_datta.apps.AdminDattaConfig',
+    'jazzmin',
     "django.contrib.admin",
+    'admin_datta.apps.AdminDattaConfig',
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    "home",
+    # Serve UI pages
+    "apps.pages",
 
     # Dynamic DT
-    "dyn_dt",
+    "apps.dyn_dt",
 
     # Dynamic API
-    "dyn_api",
+    "apps.dyn_api",
 
     # Tooling API-GEN
     'rest_framework',            # Include DRF           # <-- NEW 
@@ -78,9 +78,9 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "core.urls"
+ROOT_URLCONF = "config.urls"
 
-HOME_TEMPLATES      = os.path.join(BASE_DIR, 'templates') 
+HOME_TEMPLATES = os.path.join(BASE_DIR, 'templates') 
 
 TEMPLATES = [
     {
@@ -98,8 +98,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "core.wsgi.application"
-
+WSGI_APPLICATION = "config.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -185,14 +184,14 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # ### DYNAMIC_DATATB Settings ###
 DYNAMIC_DATATB = {
     # SLUG -> Import_PATH 
-    'product'  : "home.models.Product",
+    'product'  : "apps.pages.models.Product",
 }
 ########################################
 
 # Syntax: URI -> Import_PATH
 DYNAMIC_API = {
     # SLUG -> Import_PATH 
-    'product'  : "home.models.Product",
+    'product'  : "apps.pages.models.Product",
 }
 
 REST_FRAMEWORK = {

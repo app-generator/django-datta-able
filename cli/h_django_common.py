@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 """
-Copyright (c) AppSeed.us
+Copyright (c) App-Generator.dev | AppSeed.us
 """
 
 from .common   import *

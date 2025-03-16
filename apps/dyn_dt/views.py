@@ -6,13 +6,14 @@ from django.http import HttpResponse, JsonResponse
 from django.utils.safestring import mark_safe
 from django.conf import settings
 from django.urls import reverse
-from dyn_dt.models import ModelFilter, PageItems, HideShowFilter
-from dyn_dt.utils import user_filter
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.urls import reverse
 from django.views import View
 from django.db import models
 from pprint import pp 
+
+from apps.dyn_dt.models import ModelFilter, PageItems, HideShowFilter
+from apps.dyn_dt.utils import user_filter
 
 from cli import *
 

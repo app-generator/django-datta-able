@@ -1,5 +1,5 @@
 from django.urls import path
-from dyn_dt import views 
+from apps.dyn_dt import views 
 
 urlpatterns = [
     path('dynamic-dt/', views.index, name="dynamic_dt"),

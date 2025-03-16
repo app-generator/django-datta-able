@@ -103,26 +103,30 @@ def file_rm ( aPath ):
     if file_exists( aPath ):
         os.remove( aPath )
 
-def list_files( aPath, aExt=None ):
+def list_files( aPath, aExcludePath, aExt=None ):
 
     matches = []
 
     for root, dirnames, filenames in os.walk( aPath ):
-        
+
+        # Exclude DIRs like ENV, migrations .. etc
+        if any(ext in root for ext in aExcludePath):
+            continue
+
         if aExt: 
 
             for filename in fnmatch.filter(filenames, '*.' + aExt ):
 
-                #item = os.path.join(root, filename)
+                item = os.path.join(root, filename)
 
-                matches.append( filename)
+                matches.append( item )
         else:
 
             for filename in filenames:
 
-                #item = os.path.join(root, filename)
+                item = os.path.join(root, filename)
 
-                matches.append( filename )
+                matches.append( item )
 
     return matches
 

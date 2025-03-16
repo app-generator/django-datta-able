@@ -21,6 +21,7 @@ The product is designed to deliver the best possible user experience with highly
 - [Datta Able](https://app-generator.dev/docs/templates/bootstrap/datta-able.html) Design Integration 
 - Dynamic Tables
 - Dynamic API
+- Admin UI managed by Jazzmin
 - **CLI for Coding Tasks**
   - `Commit/rollback Git Changes`
   - `Backup & restore DB`
@@ -31,7 +32,7 @@ The product is designed to deliver the best possible user experience with highly
 - Session-based Authentication, Password recovery
 - DB Persistence: SQLite (default), can be used with MySql, PgSql
 - Docker, CI/CD for Render
-- Vite for assets management 
+- Vite for assets management
 
 ![Django Datta Able - Open-Source Django Starter](https://user-images.githubusercontent.com/51070104/176118649-7233ffbc-6118-4f56-8cda-baa81d256877.png)
 

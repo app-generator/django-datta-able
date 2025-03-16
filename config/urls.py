@@ -18,11 +18,11 @@ from django.urls import include, path
 from rest_framework.authtoken.views import obtain_auth_token # <-- NEW
 
 urlpatterns = [
-    path('', include('home.urls')),
-    path("admin/", admin.site.urls),
+    path('', include('apps.pages.urls')),
+    path("", include("apps.dyn_dt.urls")),
+    path("", include("apps.dyn_api.urls")), 
     path("", include('admin_datta.urls')),
-    path("", include("dyn_dt.urls")),
-    path("", include("dyn_api.urls")), 
+    path("admin/", admin.site.urls),
 ]
 
 # Lazy-load on routing is needed

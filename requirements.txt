@@ -3,8 +3,9 @@ django==4.2.9
 python-dotenv==1.0.1
 str2bool==1.1
 
-# UI 
-django-admin-datta==1.0.15
+# UI & Admin UI
+django-jazzmin==3.0.1
+django-admin-datta==1.0.17
 
 # Tools
 django-debug-toolbar==4.4.6

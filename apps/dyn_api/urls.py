@@ -5,7 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 
 from django.contrib import admin
 from django.urls import path
-from dyn_api import views 
+from apps.dyn_api import views 
 
 urlpatterns = [
     path('api/', views.index, name="dynamic_api"),
