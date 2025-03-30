@@ -14,16 +14,16 @@ DIR_ROOT              = '.' # points to the root
 DIR_TMPL              = os.path.join( DIR_ROOT, 'templates' )
 DIR_STATIC            = os.path.join( DIR_ROOT, 'static'    )
 
-DIR_DJ_CORE           = 'config'
-DIR_DJ_HOME           = 'home'
+DIR_DJ_CONFIG         = 'config'
+DIR_DJ_APP_DEFAULT    = 'home'
 
 FILE_DJ_MANAGE_s      = 'manage.py'
 FILE_DJ_ENV_s         = '.env'
 FILE_DJ_DEPS_s        = 'requirements.txt'
-FILE_DJ_URLS_s        = os.path.join( DIR_DJ_CORE , 'urls.py'     )
-FILE_DJ_SETTINGS_s    = os.path.join( DIR_DJ_CORE , 'settings.py' )
-FILE_DJ_INIT_s        = os.path.join( DIR_DJ_CORE , '__init__.py' )
-FILE_DJ_MODELS_s      = os.path.join( DIR_DJ_HOME , 'models.py'   )
+FILE_DJ_URLS_s        = os.path.join( DIR_DJ_CONFIG      , 'urls.py'     )
+FILE_DJ_SETTINGS_s    = os.path.join( DIR_DJ_CONFIG      , 'settings.py' )
+FILE_DJ_INIT_s        = os.path.join( DIR_DJ_CONFIG      , '__init__.py' )
+FILE_DJ_MODELS_s      = os.path.join( DIR_DJ_APP_DEFAULT , 'models.py'   )
 
 FILE_CI_BUILD_s       = 'build.sh'
 FILE_CI_RENDER_s      = 'render.yaml'

@@ -16,7 +16,7 @@ from .h_shell       import *
 from .h_code_parser import *
 
 def get_django():
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", DIR_DJ_CONFIG + ".settings")
     from collections import OrderedDict
     from django.apps import apps
     from django.conf import settings
@@ -44,7 +44,7 @@ def check_db_conn():
             print('Database unavailable, waiting 1 second...')
             time.sleep(1)        
 
-        print('Database available!')
+        print('Connecton OK')
 
 def get_apps():
     retVal = []
