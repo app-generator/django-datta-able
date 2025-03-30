@@ -10,4 +10,4 @@ def index(request):
     'segment': 'charts',
     'products': products
   }
-  return render(request, 'pages/charts.html', context)
+  return render(request, 'charts/index.html', context)
