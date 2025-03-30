@@ -1,0 +1,84 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}Charts{% endblock title %}
+
+{% block content %}
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h5 class="mb-0">Charts</h5>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <ul class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                  <li class="breadcrumb-item" aria-current="page">Charts</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- [ Bar Chart ] start -->
+          <div class="col-sm-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Bar Chart</h5>
+              </div>
+              <div class="card-body text-center">
+                <div id="bar-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- [ Bar Chart ] end -->
+
+          <!-- [ Pie Chart ] start -->
+          <div class="col-sm-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Pie Chart</h5>
+              </div>
+              <div class="card-body text-center">
+                <div id="pie-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- [ Pie Chart ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+{% endblock content %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var barOptions = {
+      chart: { type: 'bar', height: 350 },
+      series: [{ name: 'Sales', data: [30, 40, 45, 50, 49, 60, 70, 91] }],
+      xaxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'] }
+    };
+    var barChart = new ApexCharts(document.querySelector("#bar-chart"), barOptions);
+    barChart.render();
+
+    var pieOptions = {
+      chart: { type: 'pie', height: 350 },
+      series: [44, 55, 13, 43, 22],
+      labels: ['Apple', 'Mango', 'Orange', 'Banana', 'Grapes']
+    };
+    var pieChart = new ApexCharts(document.querySelector("#pie-chart"), pieOptions);
+    pieChart.render();
+  });
+</script>
+{% endblock extra_js %}

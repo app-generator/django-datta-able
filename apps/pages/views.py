@@ -13,3 +13,10 @@ def index(request):
     #'products' : Product.objects.all()
   }
   return render(request, "pages/index.html", context)
+
+
+def charts(request):
+  context = {
+    'segment': 'charts'
+  }
+  return render(request, 'pages/charts.html', context)
