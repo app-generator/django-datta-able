@@ -1,8 +1,6 @@
-from django.shortcuts import render, redirect
-from admin_datta.forms import RegistrationForm, LoginForm, UserPasswordChangeForm, UserPasswordResetForm, UserSetPasswordForm
-from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordResetConfirmView, PasswordResetView
-from django.views.generic import CreateView
-from django.contrib.auth import logout
+from django.shortcuts import render
+from apps.pages.models import Product
+from django.core import serializers
 
 from .models import *
 
@@ -16,7 +14,9 @@ def index(request):
 
 
 def charts(request):
+  products = serializers.serialize('json', Product.objects.all())
   context = {
-    'segment': 'charts'
+    'segment': 'charts',
+    'products': products
   }
   return render(request, 'pages/charts.html', context)

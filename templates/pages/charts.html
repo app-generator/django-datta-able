@@ -64,18 +64,22 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    var products = JSON.parse('{{ products|escapejs }}');
+    var names = products.map(p => p.fields.name);
+    var prices = products.map(p => p.fields.price);
+
     var barOptions = {
       chart: { type: 'bar', height: 350 },
-      series: [{ name: 'Sales', data: [30, 40, 45, 50, 49, 60, 70, 91] }],
-      xaxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'] }
+      series: [{ name: 'Price', data: prices }],
+      xaxis: { categories: names }
     };
     var barChart = new ApexCharts(document.querySelector("#bar-chart"), barOptions);
     barChart.render();
 
     var pieOptions = {
       chart: { type: 'pie', height: 350 },
-      series: [44, 55, 13, 43, 22],
-      labels: ['Apple', 'Mango', 'Orange', 'Banana', 'Grapes']
+      series: prices,
+      labels: names
     };
     var pieChart = new ApexCharts(document.querySelector("#pie-chart"), pieOptions);
     pieChart.render();
