@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.46] 2025-03-30
+### Changes
+
+- Fix Render Deployment
+- Update RM (minor)
+- Update [Django Datta Able - Documentation](https://app-generator.dev/docs/products/django/datta-able/index.html)
+
 ## [1.0.45] 2025-03-16
 ### Changes
 
