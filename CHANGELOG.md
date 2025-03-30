@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.47] 2025-03-30
+### Changes
+
+- Normalize Codebase
+- Added Charts
+- Reset Migrations
+
 ## [1.0.46] 2025-03-30
 ### Changes
 

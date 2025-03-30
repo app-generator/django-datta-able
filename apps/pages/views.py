@@ -11,12 +11,3 @@ def index(request):
     #'products' : Product.objects.all()
   }
   return render(request, "pages/index.html", context)
-
-
-def charts(request):
-  products = serializers.serialize('json', Product.objects.all())
-  context = {
-    'segment': 'charts',
-    'products': products
-  }
-  return render(request, 'pages/charts.html', context)
