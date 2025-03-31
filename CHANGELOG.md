@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.48] 2025-03-31
+### Changes
+
+- Update RM
+  - Added [Charts Demo](https://django-datta.onrender.com/charts/) Link
+
 ## [1.0.47] 2025-03-30
 ### Changes
 

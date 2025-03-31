@@ -22,6 +22,7 @@ The product is designed to deliver the best possible user experience with highly
 - [Bootstrap](https://app-generator.dev/docs/templates/bootstrap.html) CSS Styling 
 - [Dynamic Tables](https://django-datta.onrender.com/dynamic-dt/) (demo) - read [docs](https://app-generator.dev/docs/developer-tools/dynamic-datatables.html)
 - [Dynamic API](https://django-datta.onrender.com/api/) (demo) - read [docs](https://app-generator.dev/docs/developer-tools/dynamic-api.html)
+- [Charts](https://django-datta.onrender.com/charts/) (demo)
 - [Django CLI Package](https://app-generator.dev/docs/developer-tools/django-cli/index.html)
     - [Commit/rollback Git Changes](https://app-generator.dev/docs/developer-tools/django-cli/git-interface.html)
     - `Backup & restore DB`
