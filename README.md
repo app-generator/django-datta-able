@@ -38,7 +38,7 @@ The product is designed to deliver the best possible user experience with highly
 
 <br />
 
-## Deploy on `Render` (free plan)
+## Deploy on `Render`
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
