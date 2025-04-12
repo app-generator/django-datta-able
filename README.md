@@ -1,6 +1,6 @@
 # [Django Datta Able](https://app-generator.dev/product/datta-able/django/)
 
-Open-source **Django** project crafted on top of **Datta Able Dashboard**, an open-source `Bootstrap` design.
+**Open-source Django Starter** crafted on top of **[Datta Able](https://app-generator.dev/product/datta-able/)**, an open-source `Bootstrap` UI Kit released by [CodedThemes](https://app-generator.dev/agency/codedthemes/).
 The product is designed to deliver the best possible user experience with highly customizable feature-rich pages. 
 
 - 👉 [Django Datta Able](https://app-generator.dev/product/datta-able/django/) - `Product Page`
@@ -18,7 +18,7 @@ The product is designed to deliver the best possible user experience with highly
 ## Features
 
 - Simple, Easy-to-Extend codebase
-- [Datta Able](https://app-generator.dev/docs/templates/bootstrap/datta-able.html) Full Integration 
+- [Datta Able](https://app-generator.dev/product/datta-able/) Design Integration 
 - [Bootstrap](https://app-generator.dev/docs/templates/bootstrap.html) CSS Styling 
 - [Dynamic Tables](https://django-datta.onrender.com/dynamic-dt/) (demo) - read [docs](https://app-generator.dev/docs/developer-tools/dynamic-datatables.html)
 - [Dynamic API](https://django-datta.onrender.com/api/) (demo) - read [docs](https://app-generator.dev/docs/developer-tools/dynamic-api.html)
