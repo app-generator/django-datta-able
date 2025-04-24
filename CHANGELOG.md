@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.50] 2025-04-24
+### Changes
+
+- Update RM (minor)
+  - [Datta Able PRO Version](https://app-generator.dev/product/datta-able-pro/django/) Section
+     - added missing features
+
 ## [1.0.49] 2025-04-12
 ### Changes
 
