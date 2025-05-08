@@ -1,5 +1,5 @@
 # Core
-django==4.2.9
+django==4.2.21
 python-dotenv==1.0.1
 str2bool==1.1
 
