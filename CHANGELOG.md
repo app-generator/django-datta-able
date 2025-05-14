@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.51] 2025-05-14
+### Changes
+
+- Update RM Links
+  - [Datta Able PRO](https://app-generator.dev/product/datta-able-pro/django/) Section
+
 ## [1.0.50] 2025-04-24
 ### Changes
 
