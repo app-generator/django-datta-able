@@ -19,7 +19,7 @@ One of the world's fastest-growing hosting providers, **Hostinger** serves a glo
 Here are the core services we recommend: 
 
 - [HOSTING - $2.99/mo](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=207452)
-- [WebSite Builder](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=207452&url_id=2949)
+- [Website Builder](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=207452&url_id=2949)
 - [eCommerce Builder - AI Assisted](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=207452&url_id=4140)
 - [StartUp Cloud Hosting](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=207452&url_id=17) 
 
