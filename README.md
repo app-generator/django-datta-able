@@ -1,4 +1,4 @@
-# [Datta Able PRO Django](https://app-generator.dev/product/datta-able-pro/django/)
+# [Datta Able Django](https://app-generator.dev/product/datta-able-pro/django/)
 
 **Premium Django Starter** crafted on top of **[Datta Able](https://app-generator.dev/product/datta-able/)**, a premium `Bootstrap` UI Kit released by [CodedThemes](https://app-generator.dev/agency/codedthemes/). 
 The product is designed to deliver the best possible user experience with highly customizable, feature-rich pages. 
